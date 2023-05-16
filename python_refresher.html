@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python refresher: Part I &#8212; A Workshop on the pLoT</title>
+    <title>Python refresher &#8212; A day w/ the pLoT</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -83,7 +83,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">A Workshop on the pLoT</h1>
+      <h1 class="site-logo" id="site-title">A day w/ the pLoT</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Python refresher: Part I
+   Python refresher
   </a>
  </li>
 </ul>
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="1_topfile.html">
-   Session 1 - The Big Idea
+   1 - The Big Idea
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="2_topfile.html">
-   Session 2 - The technical background
+   2 - The technical background
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -175,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_lab.html">
-     Formal Grammars
+     Lab
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="3_topfile.html">
-   Session 3 - LOTlib3
+   3 - LOTlib3
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="4_topfile.html">
-   Session 4 - Applications
+   4 - Applications
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -219,12 +219,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4_lab.html">
-     Category acquisition in an LoT
+     Lab
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4_lab_solved.html">
-     Encoding binary sequences - solved lab
+     Lab (solved)
     </a>
    </li>
   </ul>
@@ -338,222 +338,199 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Python refresher: Part I
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#colab">
+   Colab
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#colab">
-     Colab
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebooks">
+   Jupyter notebooks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spaces-and-indentation">
+   Spaces and indentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#printing-and-commands">
+   Printing and commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-in-python">
+   Variables in python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equality-sign">
+   Equality sign
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types-and-their-operators">
+   Data types and their operators
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings-str">
+     Strings: str
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#jupyter-notebooks">
-     Jupyter notebooks
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integers-int">
+     Integers: int
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#some-programming-concepts-in-python">
-     Some programming concepts in python
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#spaces-and-indentation">
-       Spaces and indentation
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#printing-and-commands">
-       Printing and commands
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#comments">
-       Comments
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#variables-in-python">
-       Variables in python
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#operators">
-       Operators
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#equality-sign">
-       Equality sign
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#data-types-and-their-operators">
-       Data types and their operators
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#strings-str">
-         Strings: str
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#integers-int">
-         Integers: int
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#floats-float">
-         Floats: float
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#lists-list">
-         Lists: list
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#boolean-bool">
-         Boolean: bool
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conditionals">
-       Conditionals
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#for-loops">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         for
-        </span>
-       </code>
-       loops
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#some-other-important-keywords">
-       Some other important keywords
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-meaning-of-the-dot">
-       The meaning of the dot ‘.’
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#on-googling-problems">
-     On googling problems
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#floats-float">
+     Floats: float
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#some-exercises">
-     Some exercises
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists-list">
+     Lists: list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-bool">
+     Boolean: bool
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-refresher-part-ii">
-   Python refresher: Part II
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditionals">
+   Conditionals
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#importing-and-using-libraries">
-     Importing and using libraries
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-is-a-library">
-       What is a library?
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#how-do-we-import-and-use-libraries">
-       How do we import and use libraries?
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#motivation">
-       Motivation
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#standard-function-definition-in-python">
-       Standard function definition in python
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calling-a-function">
-       Calling a function
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lambda-lambda-functions">
-       <span class="math notranslate nohighlight">
-        \(\lambda\)
-       </span>
-       (‘lambda’) functions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recursive-functions">
-       Recursive functions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions-as-objects">
-     Functions as objects
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-other-important-keywords">
+   Some other important keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-meaning-of-the-dot">
+   The meaning of the dot ‘.’
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-googling-problems">
+   On googling problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-exercises">
+   Some exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-and-using-libraries">
+   Importing and using libraries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-library">
+     What is a library?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recursion-without-recursion-note-more-difficult">
-     Recursion without recursion (note: more difficult!)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting-in-matplotlib">
-     Plotting in Matplotlib
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classes-what-s-the-idea">
-     Classes, what’s the idea?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#error-handling">
-     Error handling
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-we-import-and-use-libraries">
+     How do we import and use libraries?
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-homeworks-set">
-   First homeworks set
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-more-word-on-programming">
-     One more word on programming
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     Motivation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-function-definition-in-python">
+     Standard function definition in python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-a-function">
+     Calling a function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lambda-lambda-functions">
+     <span class="math notranslate nohighlight">
+      \(\lambda\)
+     </span>
+     (‘lambda’) functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursive-functions">
+     Recursive functions
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-as-objects">
+   Functions as objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursion-without-recursion-note-more-difficult">
+   Recursion without recursion (note: more difficult!)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-in-matplotlib">
+   Plotting in Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes-what-s-the-idea">
+   Classes, what’s the idea?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error-handling">
+   Error handling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Some exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-more-word-on-programming">
+   One more word on programming
+  </a>
  </li>
 </ul>
 
@@ -565,7 +542,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Python refresher: Part I</h1>
+                <h1>Python refresher</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -575,222 +552,199 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Python refresher: Part I
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#colab">
+   Colab
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#colab">
-     Colab
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebooks">
+   Jupyter notebooks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spaces-and-indentation">
+   Spaces and indentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#printing-and-commands">
+   Printing and commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-in-python">
+   Variables in python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equality-sign">
+   Equality sign
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-types-and-their-operators">
+   Data types and their operators
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings-str">
+     Strings: str
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#jupyter-notebooks">
-     Jupyter notebooks
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integers-int">
+     Integers: int
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#some-programming-concepts-in-python">
-     Some programming concepts in python
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#spaces-and-indentation">
-       Spaces and indentation
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#printing-and-commands">
-       Printing and commands
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#comments">
-       Comments
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#variables-in-python">
-       Variables in python
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#operators">
-       Operators
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#equality-sign">
-       Equality sign
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#data-types-and-their-operators">
-       Data types and their operators
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#strings-str">
-         Strings: str
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#integers-int">
-         Integers: int
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#floats-float">
-         Floats: float
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#lists-list">
-         Lists: list
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#boolean-bool">
-         Boolean: bool
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conditionals">
-       Conditionals
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#for-loops">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         for
-        </span>
-       </code>
-       loops
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#some-other-important-keywords">
-       Some other important keywords
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-meaning-of-the-dot">
-       The meaning of the dot ‘.’
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#on-googling-problems">
-     On googling problems
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#floats-float">
+     Floats: float
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#some-exercises">
-     Some exercises
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists-list">
+     Lists: list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-bool">
+     Boolean: bool
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-refresher-part-ii">
-   Python refresher: Part II
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditionals">
+   Conditionals
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#importing-and-using-libraries">
-     Importing and using libraries
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-is-a-library">
-       What is a library?
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#how-do-we-import-and-use-libraries">
-       How do we import and use libraries?
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#motivation">
-       Motivation
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#standard-function-definition-in-python">
-       Standard function definition in python
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calling-a-function">
-       Calling a function
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lambda-lambda-functions">
-       <span class="math notranslate nohighlight">
-        \(\lambda\)
-       </span>
-       (‘lambda’) functions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recursive-functions">
-       Recursive functions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions-as-objects">
-     Functions as objects
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-other-important-keywords">
+   Some other important keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-meaning-of-the-dot">
+   The meaning of the dot ‘.’
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-googling-problems">
+   On googling problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-exercises">
+   Some exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-and-using-libraries">
+   Importing and using libraries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-library">
+     What is a library?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recursion-without-recursion-note-more-difficult">
-     Recursion without recursion (note: more difficult!)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plotting-in-matplotlib">
-     Plotting in Matplotlib
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#classes-what-s-the-idea">
-     Classes, what’s the idea?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#error-handling">
-     Error handling
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-we-import-and-use-libraries">
+     How do we import and use libraries?
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#first-homeworks-set">
-   First homeworks set
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#one-more-word-on-programming">
-     One more word on programming
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     Motivation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-function-definition-in-python">
+     Standard function definition in python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calling-a-function">
+     Calling a function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lambda-lambda-functions">
+     <span class="math notranslate nohighlight">
+      \(\lambda\)
+     </span>
+     (‘lambda’) functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursive-functions">
+     Recursive functions
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-as-objects">
+   Functions as objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursion-without-recursion-note-more-difficult">
+   Recursion without recursion (note: more difficult!)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-in-matplotlib">
+   Plotting in Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classes-what-s-the-idea">
+   Classes, what’s the idea?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error-handling">
+   Error handling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Some exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-more-word-on-programming">
+   One more word on programming
+  </a>
  </li>
 </ul>
 
@@ -801,8 +755,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="python-refresher-part-i">
-<h1>Python refresher: Part I<a class="headerlink" href="#python-refresher-part-i" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="python-refresher">
+<h1>Python refresher<a class="headerlink" href="#python-refresher" title="Permalink to this headline">¶</a></h1>
 <p>Hello everyone!</p>
 <p>The first two labs are going to be just an introduction to python. It’s not feasible to become familiar with programming in just two weeks, so this is meant more for people who have had previous experience with programming but might need a refresher. These are just the minimal requirements to follow the rest of the course, and it would be great if you could try to really internalize it and become familiar with it. You do this by going through the lab multiple times, or by looking at other introductions ot python on the internet. The latter might make more sense because the particular way I have to explain this stuff might not click with you; seeing different approaches is always useful.</p>
 <blockquote>
@@ -832,10 +786,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="some-programming-concepts-in-python">
-<h2>Some programming concepts in python<a class="headerlink" href="#some-programming-concepts-in-python" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="spaces-and-indentation">
-<h3>Spaces and indentation<a class="headerlink" href="#spaces-and-indentation" title="Permalink to this headline">¶</a></h3>
+<h2>Spaces and indentation<a class="headerlink" href="#spaces-and-indentation" title="Permalink to this headline">¶</a></h2>
 <p>Spaces in python are part of the code, so adding or removing spaces can change the meaning of the code or break it. For instance, this should run fine:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -866,7 +818,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="printing-and-commands">
-<h3>Printing and commands<a class="headerlink" href="#printing-and-commands" title="Permalink to this headline">¶</a></h3>
+<h2>Printing and commands<a class="headerlink" href="#printing-and-commands" title="Permalink to this headline">¶</a></h2>
 <p>As is traditional when learning a programming language, let’s start with how you print the string ‘Hello world’. Strings in python are written with single or double quotation marks (they aren’t quite the same, but that doesn’t matter here). For instance, the string containing the sentence ‘Hello world’ can be written as <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">world&quot;</span></code> or as <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">world'</span></code>.</p>
 <p>The way we print a string is by passing the string as an argument to the <code class="docutils literal notranslate"><span class="pre">print</span></code> function. Here’s the code:</p>
 <div class="cell docutils container">
@@ -889,7 +841,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div></blockquote>
 </div>
 <div class="section" id="comments">
-<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
 <p>Comments are parts of the code that are not ran when you run the code. You can add them to your code to add explanations about what your code is doing. In python, if we want to only comment one line, we use the symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>: everything after <code class="docutils literal notranslate"><span class="pre">#</span></code> will be a comment. If we want the comment to span over multiple lines, we use three quotation marks to mark the beginning of the comment and then three more to mark its end (possibly on a different line).</p>
 <p>For instance, suppose we wanted to comment the code above to explain what we are doing. We could do it so:</p>
 <div class="cell docutils container">
@@ -925,7 +877,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Python doesn’t see the comments!</p>
 </div>
 <div class="section" id="variables-in-python">
-<h3>Variables in python<a class="headerlink" href="#variables-in-python" title="Permalink to this headline">¶</a></h3>
+<h2>Variables in python<a class="headerlink" href="#variables-in-python" title="Permalink to this headline">¶</a></h2>
 <p>The topic of variables is huge and we can’t do it justice in the little space we have available here. But just to give you an idea, you can think of a variable as a letter or word that has some content.</p>
 <p>In python, variables are defined with the symbol <code class="docutils literal notranslate"><span class="pre">=</span></code>. On the left of the symbol you specify the name of your variable, and on the right the (initial) value, which you can generally change later. For instance, suppose we want to create a variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> that has as value the string <code class="docutils literal notranslate"><span class="pre">John</span></code>. We could do it as follows:</p>
 <div class="cell docutils container">
@@ -985,7 +937,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div></blockquote>
 </div>
 <div class="section" id="operators">
-<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h3>
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
 <p>We have seen how to define string and variables containing string. But what if you wanted to combine two or more strings into a longer string? This is an example of what an <em>operator</em> can do. You can think of an operator as a python keyword to do something to an object, for example a string.</p>
 <p>In the case of combining string, we can use the operator <code class="docutils literal notranslate"><span class="pre">+</span></code>. We can do it as follows:</p>
 <div class="cell docutils container">
@@ -1017,7 +969,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="equality-sign">
-<h3>Equality sign<a class="headerlink" href="#equality-sign" title="Permalink to this headline">¶</a></h3>
+<h2>Equality sign<a class="headerlink" href="#equality-sign" title="Permalink to this headline">¶</a></h2>
 <p>The equality sign in programming in a sense is close to what in English is expressed by the word ‘is’. However, note that there is a fundamental difference between two sense of ‘<code class="docutils literal notranslate"><span class="pre">a</span></code> is 3’:</p>
 <ol class="simple">
 <li><p>We are <em>giving</em> <code class="docutils literal notranslate"><span class="pre">a</span></code> the value 3</p></li>
@@ -1047,7 +999,7 @@ False
 </div>
 </div>
 <div class="section" id="data-types-and-their-operators">
-<h3>Data types and their operators<a class="headerlink" href="#data-types-and-their-operators" title="Permalink to this headline">¶</a></h3>
+<h2>Data types and their operators<a class="headerlink" href="#data-types-and-their-operators" title="Permalink to this headline">¶</a></h2>
 <p>Things in python can be of different <em>types</em>, and depending on what type they are you can do different things with them and use different operators. To check the type of any object, use the keyword <code class="docutils literal notranslate"><span class="pre">type</span></code>. For instance, the following tells us that <code class="docutils literal notranslate"><span class="pre">a</span></code> is a string (<code class="docutils literal notranslate"><span class="pre">'str'</span></code>) and that <code class="docutils literal notranslate"><span class="pre">b</span></code> is an integer (<code class="docutils literal notranslate"><span class="pre">'int'</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1068,7 +1020,7 @@ b is of type:  &lt;class &#39;int&#39;&gt;
 </div>
 <p>Let’s consider some important types one by one (not exhaustive!).</p>
 <div class="section" id="strings-str">
-<h4>Strings: str<a class="headerlink" href="#strings-str" title="Permalink to this headline">¶</a></h4>
+<h3>Strings: str<a class="headerlink" href="#strings-str" title="Permalink to this headline">¶</a></h3>
 <p>We have already briefly seen strings above. Basically, you can use them to encode text. You can join multiple strings with <code class="docutils literal notranslate"><span class="pre">+</span></code>, as we saw above. You can also do loads of other stuff with strings!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1089,7 +1041,7 @@ THIS IS A GOOD STRING
 <p>Etcetera. If you want to know more about what you can do with strings, have a look <a class="reference external" href="https://docs.python.org/3/library/string.html">here</a>.</p>
 </div>
 <div class="section" id="integers-int">
-<h4>Integers: int<a class="headerlink" href="#integers-int" title="Permalink to this headline">¶</a></h4>
+<h3>Integers: int<a class="headerlink" href="#integers-int" title="Permalink to this headline">¶</a></h3>
 <p>Integers are just numbers without a fractional part. They can be positive or negative. Note that there are limits to the size of integers in python (and to the size of variables of every other type, too).</p>
 <p>You can do with ints everything you’d expect to be able to do:</p>
 <div class="cell docutils container">
@@ -1128,7 +1080,7 @@ False
 </div>
 </div>
 <div class="section" id="floats-float">
-<h4>Floats: float<a class="headerlink" href="#floats-float" title="Permalink to this headline">¶</a></h4>
+<h3>Floats: float<a class="headerlink" href="#floats-float" title="Permalink to this headline">¶</a></h3>
 <p>Intuitively, these are numbers with a comma. You can do with them everything you can do with integers, and it behaves as you’d expect. Moreover, note that equality doesn’t care about the type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1152,7 +1104,7 @@ True
 </div>
 </div>
 <div class="section" id="lists-list">
-<h4>Lists: list<a class="headerlink" href="#lists-list" title="Permalink to this headline">¶</a></h4>
+<h3>Lists: list<a class="headerlink" href="#lists-list" title="Permalink to this headline">¶</a></h3>
 <p>You can think of lists as ordered sets of values of any type.</p>
 <p>You can define them as follows:</p>
 <div class="cell docutils container">
@@ -1218,7 +1170,7 @@ third
 </div>
 </div>
 <div class="section" id="boolean-bool">
-<h4>Boolean: bool<a class="headerlink" href="#boolean-bool" title="Permalink to this headline">¶</a></h4>
+<h3>Boolean: bool<a class="headerlink" href="#boolean-bool" title="Permalink to this headline">¶</a></h3>
 <p>Boolean values are truth values, and there’s two of them: <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>. We can manipulate Booleans as you learned in logic 1. For instance, we can use the Boolean operators to calculate a function of multiple Boolean values:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1261,7 +1213,7 @@ True
 </div>
 </div>
 <div class="section" id="conditionals">
-<h3>Conditionals<a class="headerlink" href="#conditionals" title="Permalink to this headline">¶</a></h3>
+<h2>Conditionals<a class="headerlink" href="#conditionals" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you want one thing to happen if a condition obtains and another thing to happen if it doesn’t. We can use the ‘if-else’ construction to achieve this. The way it works is:</p>
 <ul class="simple">
 <li><p>The first line of the if-else construct is like:</p></li>
@@ -1298,7 +1250,7 @@ True
 </div>
 </div>
 <div class="section" id="for-loops">
-<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you want to go through the elements of a list one by one. One way to do it would be to just do it by hand. But for long lists that would become impractical, and the point of programming is automation. A better way is to use a <em>for</em> loop. The idea is that you run some piece of code repeatedly, and a variables you specify takes on each value in the list in turn.</p>
 <p>The syntax to do this is:</p>
 <ol class="simple">
@@ -1324,7 +1276,7 @@ True
 </div>
 </div>
 <div class="section" id="some-other-important-keywords">
-<h3>Some other important keywords<a class="headerlink" href="#some-other-important-keywords" title="Permalink to this headline">¶</a></h3>
+<h2>Some other important keywords<a class="headerlink" href="#some-other-important-keywords" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">range</span></code>: Often, we want to loop over successive integers. <code class="docutils literal notranslate"><span class="pre">range</span></code> allows us to do this easily. Specifically, suppose we want to loop from number 0 to number 9. Then we could write <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(10)</span></code>. Let’s test it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1407,11 +1359,10 @@ True
 <p><code class="docutils literal notranslate"><span class="pre">import</span></code>: While ‘base’ python defines some useful by default (e.g., all the stuff we’ve seen above), often you’ll need to use functions and other things that are not defined in python by default. One option is to write them yourself, but often someone else has done that already, and if that someone else was organized enough, they put it in a library and now we can use it too! The way we do it is by first installing the library (there’s various ways of doing this, but I’ll mostly do it for you in this course) and then calling <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">&lt;libraryname&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;libraryname&gt;</span></code> stands for the name of the library you want to import.</p>
 </div>
 <div class="section" id="the-meaning-of-the-dot">
-<h3>The meaning of the dot ‘.’<a class="headerlink" href="#the-meaning-of-the-dot" title="Permalink to this headline">¶</a></h3>
+<h2>The meaning of the dot ‘.’<a class="headerlink" href="#the-meaning-of-the-dot" title="Permalink to this headline">¶</a></h2>
 <p>You’ll see that in python you often write things like <code class="docutils literal notranslate"><span class="pre">foo.bar</span></code>, where <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span></code> are some words. The meaning of the dot is that you are accessing an attribute (e.g., <code class="docutils literal notranslate"><span class="pre">bar</span></code>) from an object (e.g., <code class="docutils literal notranslate"><span class="pre">foo</span></code>). E.g., it could be something like <code class="docutils literal notranslate"><span class="pre">person.age</span></code> or <code class="docutils literal notranslate"><span class="pre">person.calculate_age()</span></code>, where you are accessing the attribute <code class="docutils literal notranslate"><span class="pre">age</span></code> from the object <code class="docutils literal notranslate"><span class="pre">person</span></code>.</p>
 <p>Objects can be all sorts of things in python (and you use the dot for things that aren’t objects, too), and this is a huge topic. But I hope that this gives you a first intuition.</p>
 <p>In practice, you’ll soon encounter this when using a library. After we import a library, e.g., we import numpy with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>, we can access the things defined within the library with the dot notation. For instance, if we want to get the function <code class="docutils literal notranslate"><span class="pre">sum</span></code> from numpy, we could write <code class="docutils literal notranslate"><span class="pre">np.sum</span></code></p>
-</div>
 </div>
 <div class="section" id="on-googling-problems">
 <h2>On googling problems<a class="headerlink" href="#on-googling-problems" title="Permalink to this headline">¶</a></h2>
@@ -1447,12 +1398,6 @@ True
 <li><p>Print the first 20 even numbers without calling <code class="docutils literal notranslate"><span class="pre">range</span></code> with three arguments.</p></li>
 </ol>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="python-refresher-part-ii">
-<h1>Python refresher: Part II<a class="headerlink" href="#python-refresher-part-ii" title="Permalink to this headline">¶</a></h1>
-<p>Last week, we have seen some basic python, which you should be familiar with by now. This includes comments, data types and some of the operators that can be used with them, and other tids and bits.</p>
-<p>This week, we’re going to look at some slightly more complex topics that are needed to work with the code in the second section of the course. Specifically, some concepts that we need to use Piantadosi’s LOTlib3 library.</p>
-<p>I expect the topics in this lab will be familiar to different extents to different people. Therefore, rather than explaining everything in huge detail, it’s easier if you just ask if you get stuck on a point, and we explore it more in detail.</p>
 <div class="section" id="importing-and-using-libraries">
 <h2>Importing and using libraries<a class="headerlink" href="#importing-and-using-libraries" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-is-a-library">
@@ -1965,7 +1910,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_159_0.png" src="_images/python_refresher_159_0.png" />
+<img alt="_images/python_refresher_156_0.png" src="_images/python_refresher_156_0.png" />
 </div>
 </div>
 <p>Another important function is to draw line plots, called simply <code class="docutils literal notranslate"><span class="pre">plot</span></code>:</p>
@@ -1987,7 +1932,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_161_0.png" src="_images/python_refresher_161_0.png" />
+<img alt="_images/python_refresher_158_0.png" src="_images/python_refresher_158_0.png" />
 </div>
 </div>
 <p>Since we will be dealing with discrete variables a lot, it will be useful to also draw barplot, with the method <code class="docutils literal notranslate"><span class="pre">bar</span></code>:</p>
@@ -2009,7 +1954,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_163_0.png" src="_images/python_refresher_163_0.png" />
+<img alt="_images/python_refresher_160_0.png" src="_images/python_refresher_160_0.png" />
 </div>
 </div>
 <p>We will also need to know what we are plotting, so we need to change the labels on the x-axis:</p>
@@ -2041,7 +1986,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_165_0.png" src="_images/python_refresher_165_0.png" />
+<img alt="_images/python_refresher_162_0.png" src="_images/python_refresher_162_0.png" />
 </div>
 </div>
 </div>
@@ -2196,9 +2141,8 @@ True
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="first-homeworks-set">
-<h1>First homeworks set<a class="headerlink" href="#first-homeworks-set" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Some exercises<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Write a function to sum three numbers.</p></li>
 <li><p>Write a <span class="math notranslate nohighlight">\(\lambda\)</span> function to sum three numbers.</p></li>
@@ -2241,11 +2185,11 @@ n! &amp;= n \times (n-1)!
 <ul class="simple">
 <li><p>Google how to read a text file and print out its content. Write code that does this, but using the <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">except</span> <span class="pre">...</span></code> statements prints ‘File does not exist!’ if the file does not exist.</p></li>
 </ul>
+</div>
 <div class="section" id="one-more-word-on-programming">
 <h2>One more word on programming<a class="headerlink" href="#one-more-word-on-programming" title="Permalink to this headline">¶</a></h2>
 <p>This was a super super condensed introduction / refresher on python, but of course it could only scratch the surface of the tip of the iceberg (metaphor parkour!).</p>
 <p>If this stuff was all familiar and easy peasy, steady on. However, if you found it new / difficult / confusing, I recommend that you try to familiarize yourself with these concepts as soon as possible. Also, let me know and if there is enough interest I can arrange a separate class for a more thorough introduction to programming.</p>
-<p><font size=10>Don’t lose the thread of the course!</font></p>
 </div>
 </div>
 

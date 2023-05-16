@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formal Grammars &#8212; A Workshop on the pLoT</title>
+    <title>Formal background &#8212; A day w/ the pLoT</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -83,7 +83,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">A Workshop on the pLoT</h1>
+      <h1 class="site-logo" id="site-title">A day w/ the pLoT</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python_refresher.html">
-   Python refresher: Part I
+   Python refresher
   </a>
  </li>
 </ul>
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="1_topfile.html">
-   Session 1 - The Big Idea
+   1 - The Big Idea
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="2_topfile.html">
-   Session 2 - The technical background
+   2 - The technical background
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -175,14 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Formal Grammars
+     Lab
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="3_topfile.html">
-   Session 3 - LOTlib3
+   3 - LOTlib3
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="4_topfile.html">
-   Session 4 - Applications
+   4 - Applications
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -219,12 +219,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4_lab.html">
-     Category acquisition in an LoT
+     Lab
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4_lab_solved.html">
-     Encoding binary sequences - solved lab
+     Lab (solved)
     </a>
    </li>
   </ul>
@@ -338,37 +338,37 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formal-grammars">
    Formal Grammars
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-dictionaries">
      Using dictionaries
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-new-piece-of-python-syntax-generators">
      A new piece of python syntax: generators
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-classes">
      Using classes
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#defining-a-grammars-class">
        Defining a grammars class
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#finding-minimal-formulas-more-difficult">
        Finding minimal formulas (more difficult!)
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#probabilistic-context-free-grammar">
        Probabilistic context-free grammar
       </a>
@@ -377,91 +377,93 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#formal-semantics">
    Formal semantics
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#basic-arithmetic-as-a-cfg">
      Basic arithmetic as a CFG
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-simple-grammar">
        A simple grammar
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#interpreting-the-grammar">
        Interpreting the grammar
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#from-a-cfg-to-a-pcfg">
        From a CFG to a PCFG
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#expanding-the-grammar">
        Expanding the grammar
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-grammar-for-shapes">
      A grammar for shapes
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-grammar-for-music">
      A grammar for music
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#homework">
      Homework
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-some-initial-code-for-tower-grammar">
-     (Optional: some initial code for tower grammar)
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#optional-some-initial-code-for-tower-grammar">
+       (Optional: some initial code for tower grammar)
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bayes">
    Bayes
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-metropolis-hastings-algorithm">
      The Metropolis-Hastings algorithm
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#getting-samples-from-an-unnormalized-normal-distribution">
      Getting samples from an unnormalized normal distribution
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-mhmc-for-bayesian-inference-categorization-in-continuous-space">
      Using MHMC for Bayesian inference: categorization in continuous space
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-mhmc-in-discrete-spaces">
      Using MHMC in discrete spaces
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Homework
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implemented-mhmc">
      Implemented MHMC
     </a>
@@ -478,7 +480,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Formal Grammars</h1>
+                <h1>Formal background</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -488,37 +490,37 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formal-grammars">
    Formal Grammars
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-dictionaries">
      Using dictionaries
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-new-piece-of-python-syntax-generators">
      A new piece of python syntax: generators
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-classes">
      Using classes
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#defining-a-grammars-class">
        Defining a grammars class
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#finding-minimal-formulas-more-difficult">
        Finding minimal formulas (more difficult!)
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#probabilistic-context-free-grammar">
        Probabilistic context-free grammar
       </a>
@@ -527,91 +529,93 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#formal-semantics">
    Formal semantics
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#basic-arithmetic-as-a-cfg">
      Basic arithmetic as a CFG
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#a-simple-grammar">
        A simple grammar
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#interpreting-the-grammar">
        Interpreting the grammar
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#from-a-cfg-to-a-pcfg">
        From a CFG to a PCFG
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#expanding-the-grammar">
        Expanding the grammar
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-grammar-for-shapes">
      A grammar for shapes
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-grammar-for-music">
      A grammar for music
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#homework">
      Homework
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-some-initial-code-for-tower-grammar">
-     (Optional: some initial code for tower grammar)
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#optional-some-initial-code-for-tower-grammar">
+       (Optional: some initial code for tower grammar)
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bayes">
    Bayes
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-metropolis-hastings-algorithm">
      The Metropolis-Hastings algorithm
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#getting-samples-from-an-unnormalized-normal-distribution">
      Getting samples from an unnormalized normal distribution
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-mhmc-for-bayesian-inference-categorization-in-continuous-space">
      Using MHMC for Bayesian inference: categorization in continuous space
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-mhmc-in-discrete-spaces">
      Using MHMC in discrete spaces
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Homework
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#implemented-mhmc">
      Implemented MHMC
     </a>
@@ -627,8 +631,10 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="formal-grammars">
-<h1>Formal Grammars<a class="headerlink" href="#formal-grammars" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="formal-background">
+<h1>Formal background<a class="headerlink" href="#formal-background" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="formal-grammars">
+<h2>Formal Grammars<a class="headerlink" href="#formal-grammars" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">choice</span>
@@ -637,7 +643,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="using-dictionaries">
-<h2>Using dictionaries<a class="headerlink" href="#using-dictionaries" title="Permalink to this headline">¶</a></h2>
+<h3>Using dictionaries<a class="headerlink" href="#using-dictionaries" title="Permalink to this headline">¶</a></h3>
 <p>One simple and intuitive way of implementing a grammar in python is as a dictionary:</p>
 <ul class="simple">
 <li><p>The keys are the left hand side rules</p></li>
@@ -700,7 +706,7 @@ S \rightarrow aS | bS | \epsilon
 </div>
 </div>
 <div class="section" id="a-new-piece-of-python-syntax-generators">
-<h2>A new piece of python syntax: generators<a class="headerlink" href="#a-new-piece-of-python-syntax-generators" title="Permalink to this headline">¶</a></h2>
+<h3>A new piece of python syntax: generators<a class="headerlink" href="#a-new-piece-of-python-syntax-generators" title="Permalink to this headline">¶</a></h3>
 <p>Before we move onto defining classes to model grammars, which allow richer structures than dictionaries, we need to briefly talk about generators. A generator is basically <em>a function with a memory</em>, which can return multiple things in succession. Suppose you have a generator called <code class="docutils literal notranslate"><span class="pre">gen</span></code>. A typical use case is to use it in a construction like <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">gen():</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> will take on in succession the values returned by the generator.</p>
 <p>The definition is almost like a function, except generators have the keyword <code class="docutils literal notranslate"><span class="pre">yield</span></code> where functions have <code class="docutils literal notranslate"><span class="pre">return</span></code>, and the execution doesn’t stop at the return but can continue as long as future yield are possible.</p>
 <p>The simple example is a generator that first yields (returns) 1 and then 2:</p>
@@ -813,12 +819,12 @@ S \rightarrow aS | bS | \epsilon
 </div>
 </div>
 <div class="section" id="using-classes">
-<h2>Using classes<a class="headerlink" href="#using-classes" title="Permalink to this headline">¶</a></h2>
+<h3>Using classes<a class="headerlink" href="#using-classes" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p><strong>NOTE</strong>: Before you work on the exercise in ‘Defining a grammar class’ please have a look at the rest of the notebook. This should give you an idea of what you need to do with that class, and therefore how to structure them internally.</p>
 </div></blockquote>
 <div class="section" id="defining-a-grammars-class">
-<h3>Defining a grammars class<a class="headerlink" href="#defining-a-grammars-class" title="Permalink to this headline">¶</a></h3>
+<h4>Defining a grammars class<a class="headerlink" href="#defining-a-grammars-class" title="Permalink to this headline">¶</a></h4>
 <p>Write a Grammar class to create context-free grammars. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method should take a <code class="docutils literal notranslate"><span class="pre">start</span></code> argument with the starting nonterminal symbol.</p>
 <p>The class should also have the following method (i.e., function):</p>
 <ul class="simple">
@@ -854,7 +860,7 @@ S \rightarrow aS | bS | \epsilon
 </div>
 </div>
 <div class="section" id="finding-minimal-formulas-more-difficult">
-<h3>Finding minimal formulas (more difficult!)<a class="headerlink" href="#finding-minimal-formulas-more-difficult" title="Permalink to this headline">¶</a></h3>
+<h4>Finding minimal formulas (more difficult!)<a class="headerlink" href="#finding-minimal-formulas-more-difficult" title="Permalink to this headline">¶</a></h4>
 <p>Now add another method <code class="docutils literal notranslate"><span class="pre">compute_first</span></code> to the class above which generates the <code class="docutils literal notranslate"><span class="pre">n</span></code> shortest strings in the language.</p>
 <p>You should be able to run for instance (given the palindrome grammar above):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span><span class="o">.</span><span class="n">compute_first</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -907,7 +913,7 @@ abba
 </div>
 </div>
 <div class="section" id="probabilistic-context-free-grammar">
-<h3>Probabilistic context-free grammar<a class="headerlink" href="#probabilistic-context-free-grammar" title="Permalink to this headline">¶</a></h3>
+<h4>Probabilistic context-free grammar<a class="headerlink" href="#probabilistic-context-free-grammar" title="Permalink to this headline">¶</a></h4>
 <p>Expand the Grammar class once more so that <code class="docutils literal notranslate"><span class="pre">add_rule</span></code> takes one more argument: The (unnormalized) probability of applying the rule rather than the other rules with the same left-hand side.</p>
 <p>The following code for instance redefines the palindrome grammar above but with probabilities:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
@@ -948,8 +954,8 @@ abba
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="formal-semantics">
-<h1>Formal semantics<a class="headerlink" href="#formal-semantics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="formal-semantics">
+<h2>Formal semantics<a class="headerlink" href="#formal-semantics" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3 install ColabTurtlePlus
@@ -1009,9 +1015,9 @@ abba
 </div>
 </div>
 <div class="section" id="basic-arithmetic-as-a-cfg">
-<h2>Basic arithmetic as a CFG<a class="headerlink" href="#basic-arithmetic-as-a-cfg" title="Permalink to this headline">¶</a></h2>
+<h3>Basic arithmetic as a CFG<a class="headerlink" href="#basic-arithmetic-as-a-cfg" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="a-simple-grammar">
-<h3>A simple grammar<a class="headerlink" href="#a-simple-grammar" title="Permalink to this headline">¶</a></h3>
+<h4>A simple grammar<a class="headerlink" href="#a-simple-grammar" title="Permalink to this headline">¶</a></h4>
 <p>Before we get onto interpreting sentences from the grammar, we need a grammar to produce sentences with. For simplicity, we will encode the language as a dictionary. The keys are the left-hand side of substitution rules, the values a list of possible right-hand sides.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> We will put non-terminals between angle brackets, e.g. <code class="docutils literal notranslate"><span class="pre">'&lt;S&gt;'</span></code> to simplify parsing the strings.</p>
@@ -1062,7 +1068,7 @@ abba
 <p>Note that even though we have a sentence now and we have an <em>intuitive</em> sense of what it could mean, we still need a way of implementing the interpretation in python. So let’s do that!</p>
 </div>
 <div class="section" id="interpreting-the-grammar">
-<h3>Interpreting the grammar<a class="headerlink" href="#interpreting-the-grammar" title="Permalink to this headline">¶</a></h3>
+<h4>Interpreting the grammar<a class="headerlink" href="#interpreting-the-grammar" title="Permalink to this headline">¶</a></h4>
 <p>We will use <span class="math notranslate nohighlight">\(\lambda\)</span> expressions to encode the meaning of our operators. Thankfully this is made quite easy by Python’s lambda syntax, which we have seen a couple of weeks ago. We want to interpret the very simple arithmetic language defined above. We assume a type system with:</p>
 <ul class="simple">
 <li><p>One primitive type <span class="math notranslate nohighlight">\(n\)</span>, the type of integers.</p></li>
@@ -1139,13 +1145,13 @@ abba
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_62_0.png" src="_images/2_lab_62_0.png" />
+<img alt="_images/2_lab_63_0.png" src="_images/2_lab_63_0.png" />
 </div>
 </div>
 <p>Turns out the probability of each number <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(2^{-n}\)</span>. Can you tell why?</p>
 </div>
 <div class="section" id="from-a-cfg-to-a-pcfg">
-<h3>From a CFG to a PCFG<a class="headerlink" href="#from-a-cfg-to-a-pcfg" title="Permalink to this headline">¶</a></h3>
+<h4>From a CFG to a PCFG<a class="headerlink" href="#from-a-cfg-to-a-pcfg" title="Permalink to this headline">¶</a></h4>
 <p>In practice, we’ll mostly work with <em>probabilistic</em> context free grammars. The idea here is that for each nonterminal we specify the probability of each possible substitution. A natural way of doing this here is, instead of having simply a list of possible substitutions as the value of the grammar dictionary, we have a list of tuples. The first element of each tuple is the (unnormalized) probability of that substitution rule, the second element is the actual right-hand side.</p>
 <p>Applying this to our simple arithmetic grammar above:</p>
 <div class="cell docutils container">
@@ -1175,7 +1181,7 @@ abba
 </div>
 </div>
 <div class="section" id="expanding-the-grammar">
-<h3>Expanding the grammar<a class="headerlink" href="#expanding-the-grammar" title="Permalink to this headline">¶</a></h3>
+<h4>Expanding the grammar<a class="headerlink" href="#expanding-the-grammar" title="Permalink to this headline">¶</a></h4>
 <p>Our simple arithmetical grammar is cool and all, but extremely small. Let’s enrich it slightly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1251,13 +1257,13 @@ abba
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_79_0.png" src="_images/2_lab_79_0.png" />
+<img alt="_images/2_lab_80_0.png" src="_images/2_lab_80_0.png" />
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="a-grammar-for-shapes">
-<h2>A grammar for shapes<a class="headerlink" href="#a-grammar-for-shapes" title="Permalink to this headline">¶</a></h2>
+<h3>A grammar for shapes<a class="headerlink" href="#a-grammar-for-shapes" title="Permalink to this headline">¶</a></h3>
 <p>Instead of defining meanings ourselves, we can rely on already existing libraries, even if they were not meant to be used with a CFG. For instance, consider Python’s ‘turtle’ library. The idea is very simple: Imagine a little turtle that moves around the screen according to certain instructions, and as it moves around it traces a line. Instructions are things like ‘move forward’, ‘go around some of a circle’, etc.</p>
 <p>Here’s an example to show you the syntax:</p>
 <div class="cell docutils container">
@@ -1470,7 +1476,7 @@ for i in range(20):
 <p>If we take the LoT hypothesis seriously, we can then think that shape concepts (squares, triangles, etc.) are encoded at the cognitive level as sentences in the geometric fragment of the LoT.</p>
 </div>
 <div class="section" id="a-grammar-for-music">
-<h2>A grammar for music<a class="headerlink" href="#a-grammar-for-music" title="Permalink to this headline">¶</a></h2>
+<h3>A grammar for music<a class="headerlink" href="#a-grammar-for-music" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define rate (don&#39;t worry about this!)</span>
@@ -1686,7 +1692,7 @@ for i in range(20):
 </div></blockquote>
 </div>
 <div class="section" id="homework">
-<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<h3>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
 <p>Second homework set! Here’s the task:</p>
 <ol class="simple">
 <li><p>Pick a domain. You are free to pick the domain you want, but here are some ideas (in increasing complexity):</p>
@@ -1724,9 +1730,8 @@ for i in range(20):
 </li>
 </ol>
 <p>In this lab we have seen how to do this for three domains (numbers, geometrical shapes, sounds), which should give you an idea of how it’s done.</p>
-</div>
 <div class="section" id="optional-some-initial-code-for-tower-grammar">
-<h2>(Optional: some initial code for tower grammar)<a class="headerlink" href="#optional-some-initial-code-for-tower-grammar" title="Permalink to this headline">¶</a></h2>
+<h4>(Optional: some initial code for tower grammar)<a class="headerlink" href="#optional-some-initial-code-for-tower-grammar" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pymunk
@@ -2176,8 +2181,9 @@ AAAAAAAtaWxzdAAAACWpdG9vAAAAHWRhdGEAAAABAAAAAExhdmY1OC4yOS4xMDA=
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="bayes">
-<h1>Bayes<a class="headerlink" href="#bayes" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="bayes">
+<h2>Bayes<a class="headerlink" href="#bayes" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2187,7 +2193,7 @@ AAAAAAAtaWxzdAAAACWpdG9vAAAAHWRhdGEAAAABAAAAAExhdmY1OC4yOS4xMDA=
 </div>
 </div>
 <div class="section" id="the-metropolis-hastings-algorithm">
-<h2>The Metropolis-Hastings algorithm<a class="headerlink" href="#the-metropolis-hastings-algorithm" title="Permalink to this headline">¶</a></h2>
+<h3>The Metropolis-Hastings algorithm<a class="headerlink" href="#the-metropolis-hastings-algorithm" title="Permalink to this headline">¶</a></h3>
 <p>In the lecture this week, we have seen the <em>Metropolis-Hastings</em> algorithm, which allows us to get samples from an <em>unnormalized</em> distribution function, i.e., a function that returns a probability multiplied by some constant factor. Note that this can be any distribution (although in practice we will need it to get samples from an unnormalized posterior).</p>
 <p>First of all, have a look at the description of the algorithm and try to implement it as described here.</p>
 <blockquote>
@@ -2264,7 +2270,7 @@ But it also has some cons:</p></li>
 <p>In general, we should get as many samples as possible and run multiple chains with different initial points, to see if they converged to the same distribution.</p>
 </div>
 <div class="section" id="getting-samples-from-an-unnormalized-normal-distribution">
-<h2>Getting samples from an unnormalized normal distribution<a class="headerlink" href="#getting-samples-from-an-unnormalized-normal-distribution" title="Permalink to this headline">¶</a></h2>
+<h3>Getting samples from an unnormalized normal distribution<a class="headerlink" href="#getting-samples-from-an-unnormalized-normal-distribution" title="Permalink to this headline">¶</a></h3>
 <p>The simplest application is to get samples from a distribution that we can calculate exactly, and see if the algorithm converges to it. Let’s take the standard normal distribution, which has density function:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -2296,7 +2302,7 @@ But it also has some cons:</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_134_0.png" src="_images/2_lab_134_0.png" />
+<img alt="_images/2_lab_135_0.png" src="_images/2_lab_135_0.png" />
 </div>
 </div>
 <p>Now suppose that we didn’t have the explicit formula for the distribution, but rather some black-box function where <span class="math notranslate nohighlight">\(\varphi\)</span> is multiplied by an unknown constant <span class="math notranslate nohighlight">\(K\)</span>:</p>
@@ -2335,12 +2341,12 @@ But it also has some cons:</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_138_0.png" src="_images/2_lab_138_0.png" />
+<img alt="_images/2_lab_139_0.png" src="_images/2_lab_139_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="using-mhmc-for-bayesian-inference-categorization-in-continuous-space">
-<h2>Using MHMC for Bayesian inference: categorization in continuous space<a class="headerlink" href="#using-mhmc-for-bayesian-inference-categorization-in-continuous-space" title="Permalink to this headline">¶</a></h2>
+<h3>Using MHMC for Bayesian inference: categorization in continuous space<a class="headerlink" href="#using-mhmc-for-bayesian-inference-categorization-in-continuous-space" title="Permalink to this headline">¶</a></h3>
 <p>Now recall the categorization case that we saw in class: we observe some samples from an unknown category, and we have to form a posterior over the position of the unseen category’s boundaries. The case we have seen in class has discrete boundaries, and therefore we could in theory calculate the posterior directly: consider all the possible hypotheses (categories) <span class="math notranslate nohighlight">\(H\)</span>, calculate <span class="math notranslate nohighlight">\(P(H) P(D \mid H)\)</span>, and sum it all to find <span class="math notranslate nohighlight">\(P(D)\)</span>.</p>
 <p>However, now imagine the case where we have a <em>continuous</em> space, and so infinitely many categories. The probability density of sampling a certain observation from a category is still 0 if the observation lies outside the category and <span class="math notranslate nohighlight">\(1/|H|\)</span> otherwise, but now the category <span class="math notranslate nohighlight">\(H\)</span> can have a float size (e.g., category [-1, 0.5] has size 1.5). Now it becomes difficult to calculate the <span class="math notranslate nohighlight">\(P(D)\)</span>, because we can’t easily integrate over all categories!</p>
 <p>However, if we define some prior over hypotheses (i.e. the categories), we can still easily calculate the numerator of the posterior, namely <span class="math notranslate nohighlight">\(P(H) P(D \mid H)\)</span>, for specific categories. A simple prior can be defined as follows:</p>
@@ -2424,7 +2430,7 @@ p(D \mid H) = \prod_{d \in D} \left( |H|^{-1} \text{ if } d \in H \text{ else } 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_149_0.png" src="_images/2_lab_149_0.png" />
+<img alt="_images/2_lab_150_0.png" src="_images/2_lab_150_0.png" />
 </div>
 </div>
 <p>Now we are ready to run approximate Bayesian inference on some data! Let’s define some data first:</p>
@@ -2484,7 +2490,7 @@ p(D \mid H) = \prod_{d \in D} \left( |H|^{-1} \text{ if } d \in H \text{ else } 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_156_0.png" src="_images/2_lab_156_0.png" />
+<img alt="_images/2_lab_157_0.png" src="_images/2_lab_157_0.png" />
 </div>
 </div>
 <blockquote>
@@ -2495,7 +2501,7 @@ p(D \mid H) = \prod_{d \in D} \left( |H|^{-1} \text{ if } d \in H \text{ else } 
 </div></blockquote>
 </div>
 <div class="section" id="using-mhmc-in-discrete-spaces">
-<h2>Using MHMC in discrete spaces<a class="headerlink" href="#using-mhmc-in-discrete-spaces" title="Permalink to this headline">¶</a></h2>
+<h3>Using MHMC in discrete spaces<a class="headerlink" href="#using-mhmc-in-discrete-spaces" title="Permalink to this headline">¶</a></h3>
 <p>We can use Metropolis-Hastings for discrete hypotheses spaces too! The basic idea is the same: we move around the space of hypotheses, calculating the unnormalized posterior for each point, and accepting new moves according to the rule described in the algo. The only complication is that we can’t use the normal distribution centered at the current position as a proposal distribution, but we must come up with something different.</p>
 <p>As an example which will be useful in the future, consider the space of sentences generated by a PCFG as the space of hypotheses. For instance, the following PCFG:</p>
 <div class="math notranslate nohighlight">
@@ -2550,7 +2556,7 @@ S \rightarrow a | b | Sa | Sb
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_165_0.png" src="_images/2_lab_165_0.png" />
+<img alt="_images/2_lab_166_0.png" src="_images/2_lab_166_0.png" />
 </div>
 </div>
 <p>Based on this, it is easy to calculate the probability of each sentence:</p>
@@ -2747,7 +2753,7 @@ S \rightarrow a | b | Sa | Sb
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2_lab_184_0.png" src="_images/2_lab_184_0.png" />
+<img alt="_images/2_lab_185_0.png" src="_images/2_lab_185_0.png" />
 </div>
 </div>
 <p>Various things to be noticed:</p>
@@ -2759,7 +2765,7 @@ S \rightarrow a | b | Sa | Sb
 </ul>
 </div>
 <div class="section" id="id1">
-<h2>Homework<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>Homework<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Third (and last) homeworks set! Consider the following CFG (interpret it as a PCFG with uniform probabilities), where each sentence from this grammar is an integer:
 $<span class="math notranslate nohighlight">\(
 S \rightarrow 1 | S+1 | S-1
@@ -2786,7 +2792,7 @@ as usual, \)</span>I<span class="math notranslate nohighlight">\( is the interpr
 </ol>
 </div>
 <div class="section" id="implemented-mhmc">
-<h2>Implemented MHMC<a class="headerlink" href="#implemented-mhmc" title="Permalink to this headline">¶</a></h2>
+<h3>Implemented MHMC<a class="headerlink" href="#implemented-mhmc" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mcmc</span><span class="p">(</span><span class="n">nsamples</span><span class="p">,</span> <span class="n">unnorm_prob_f</span><span class="p">,</span> <span class="n">proposalf</span><span class="p">,</span> <span class="n">burnin</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="mf">0.</span><span class="p">):</span>
@@ -2841,6 +2847,7 @@ as usual, \)</span>I<span class="math notranslate nohighlight">\( is the interpr
     <span class="c1"># return list of samples</span>
     <span class="k">return</span> <span class="n">states</span><span class="p">[</span><span class="n">burnin</span><span class="p">:]</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>

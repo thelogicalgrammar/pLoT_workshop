@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encoding binary sequences - solved lab &#8212; A Workshop on the pLoT</title>
+    <title>Solved case studies &#8212; A day w/ the pLoT</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Category acquisition in an LoT" href="4_lab.html" />
+    <link rel="prev" title="Case studies" href="4_lab.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -80,7 +80,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">A Workshop on the pLoT</h1>
+      <h1 class="site-logo" id="site-title">A day w/ the pLoT</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -123,7 +123,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python_refresher.html">
-   Python refresher: Part I
+   Python refresher
   </a>
  </li>
 </ul>
@@ -135,7 +135,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="1_topfile.html">
-   Session 1 - The Big Idea
+   1 - The Big Idea
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -157,7 +157,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="2_topfile.html">
-   Session 2 - The technical background
+   2 - The technical background
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -172,14 +172,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2_lab.html">
-     Formal Grammars
+     Lab
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="3_topfile.html">
-   Session 3 - LOTlib3
+   3 - LOTlib3
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="4_topfile.html">
-   Session 4 - Applications
+   4 - Applications
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -216,12 +216,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4_lab.html">
-     Category acquisition in an LoT
+     Lab
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Encoding binary sequences - solved lab
+     Lab (solved)
     </a>
    </li>
   </ul>
@@ -335,79 +335,81 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoding-binary-sequences-solved-lab">
    Encoding binary sequences - solved lab
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
      Imports
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#define-the-grammar">
      Define the grammar
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#define-the-semantics">
      Define the semantics
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#hypothesis-and-inference">
      Hypothesis and inference
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#learning-functions-solved-lab">
    Learning functions - solved lab
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Imports
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-task">
      The task
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Define the grammar
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Define the grammar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#defining-hypothesis">
      Defining hypothesis
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fitting-hypothesis-to-the-data">
      Fitting hypothesis to the data
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recovering-fs-above">
      Recovering fs above
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#f1">
        f1
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#f2">
        f2
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#f3">
        f3
       </a>
@@ -426,7 +428,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Encoding binary sequences - solved lab</h1>
+                <h1>Solved case studies</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -436,79 +438,81 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoding-binary-sequences-solved-lab">
    Encoding binary sequences - solved lab
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
      Imports
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#define-the-grammar">
      Define the grammar
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#define-the-semantics">
      Define the semantics
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#hypothesis-and-inference">
      Hypothesis and inference
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#learning-functions-solved-lab">
    Learning functions - solved lab
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Imports
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-task">
      The task
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Define the grammar
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Define the grammar
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#defining-hypothesis">
      Defining hypothesis
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fitting-hypothesis-to-the-data">
      Fitting hypothesis to the data
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#recovering-fs-above">
      Recovering fs above
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#f1">
        f1
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#f2">
        f2
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#f3">
        f3
       </a>
@@ -526,8 +530,10 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="encoding-binary-sequences-solved-lab">
-<h1>Encoding binary sequences - solved lab<a class="headerlink" href="#encoding-binary-sequences-solved-lab" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="solved-case-studies">
+<h1>Solved case studies<a class="headerlink" href="#solved-case-studies" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="encoding-binary-sequences-solved-lab">
+<h2>Encoding binary sequences - solved lab<a class="headerlink" href="#encoding-binary-sequences-solved-lab" title="Permalink to this headline">¶</a></h2>
 <p>The lab this week consists of implementing all together the grammar from this week’s reading and fitting some fake data to it. This notebook is a report of what we wrote together!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -549,7 +555,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <p>First we need to import a bunch of stuff:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -567,7 +573,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="define-the-grammar">
-<h2>Define the grammar<a class="headerlink" href="#define-the-grammar" title="Permalink to this headline">¶</a></h2>
+<h3>Define the grammar<a class="headerlink" href="#define-the-grammar" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
@@ -633,7 +639,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="define-the-semantics">
-<h2>Define the semantics<a class="headerlink" href="#define-the-semantics" title="Permalink to this headline">¶</a></h2>
+<h3>Define the semantics<a class="headerlink" href="#define-the-semantics" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
@@ -678,7 +684,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="hypothesis-and-inference">
-<h2>Hypothesis and inference<a class="headerlink" href="#hypothesis-and-inference" title="Permalink to this headline">¶</a></h2>
+<h3>Hypothesis and inference<a class="headerlink" href="#hypothesis-and-inference" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CoolHypothesis</span><span class="p">(</span><span class="n">BinaryLikelihood</span><span class="p">,</span> <span class="n">LOTHypothesis</span><span class="p">):</span>
@@ -746,8 +752,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="learning-functions-solved-lab">
-<h1>Learning functions - solved lab<a class="headerlink" href="#learning-functions-solved-lab" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-functions-solved-lab">
+<h2>Learning functions - solved lab<a class="headerlink" href="#learning-functions-solved-lab" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
@@ -768,7 +774,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Imports<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>Imports<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>First we need to import a bunch of stuff:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -803,7 +809,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="the-task">
-<h2>The task<a class="headerlink" href="#the-task" title="Permalink to this headline">¶</a></h2>
+<h3>The task<a class="headerlink" href="#the-task" title="Permalink to this headline">¶</a></h3>
 <p>The aim here is to define a language that recovers the explicit form for a mathematical function most likely to have generated a certain set of input-output pairs.</p>
 <p>For instance, to start with we might want: addition, product, power, log, exp.</p>
 <p>If we want to make it fancier, we can add recursion up to a level (which allows us to do e.g. series)</p>
@@ -934,17 +940,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4_lab_solved_30_0.png" src="_images/4_lab_solved_30_0.png" />
+<img alt="_images/4_lab_solved_31_0.png" src="_images/4_lab_solved_31_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<img alt="_images/4_lab_solved_30_2.png" src="_images/4_lab_solved_30_2.png" />
+<img alt="_images/4_lab_solved_31_2.png" src="_images/4_lab_solved_31_2.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<img alt="_images/4_lab_solved_30_4.png" src="_images/4_lab_solved_30_4.png" />
+<img alt="_images/4_lab_solved_31_4.png" src="_images/4_lab_solved_31_4.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -996,9 +1003,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="defining-hypothesis">
-<h2>Defining hypothesis<a class="headerlink" href="#defining-hypothesis" title="Permalink to this headline">¶</a></h2>
+<h3>Defining hypothesis<a class="headerlink" href="#defining-hypothesis" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normal_density</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
@@ -1054,7 +1060,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="fitting-hypothesis-to-the-data">
-<h2>Fitting hypothesis to the data<a class="headerlink" href="#fitting-hypothesis-to-the-data" title="Permalink to this headline">¶</a></h2>
+<h3>Fitting hypothesis to the data<a class="headerlink" href="#fitting-hypothesis-to-the-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -1078,7 +1084,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7ff8fa408430&gt;
 </pre></div>
 </div>
-<img alt="_images/4_lab_solved_40_1.png" src="_images/4_lab_solved_40_1.png" />
+<img alt="_images/4_lab_solved_41_1.png" src="_images/4_lab_solved_41_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1120,9 +1126,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="recovering-fs-above">
-<h2>Recovering fs above<a class="headerlink" href="#recovering-fs-above" title="Permalink to this headline">¶</a></h2>
+<h3>Recovering fs above<a class="headerlink" href="#recovering-fs-above" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="f1">
-<h3>f1<a class="headerlink" href="#f1" title="Permalink to this headline">¶</a></h3>
+<h4>f1<a class="headerlink" href="#f1" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="p">[</span>
@@ -1185,12 +1191,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff8ebd20bb0&gt;]
 </pre></div>
 </div>
-<img alt="_images/4_lab_solved_48_1.png" src="_images/4_lab_solved_48_1.png" />
+<img alt="_images/4_lab_solved_49_1.png" src="_images/4_lab_solved_49_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="f2">
-<h3>f2<a class="headerlink" href="#f2" title="Permalink to this headline">¶</a></h3>
+<h4>f2<a class="headerlink" href="#f2" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data2</span> <span class="o">=</span> <span class="p">[</span>
@@ -1254,12 +1260,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff8eb563160&gt;]
 </pre></div>
 </div>
-<img alt="_images/4_lab_solved_54_1.png" src="_images/4_lab_solved_54_1.png" />
+<img alt="_images/4_lab_solved_55_1.png" src="_images/4_lab_solved_55_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="f3">
-<h3>f3<a class="headerlink" href="#f3" title="Permalink to this headline">¶</a></h3>
+<h4>f3<a class="headerlink" href="#f3" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data3</span> <span class="o">=</span> <span class="p">[</span>
@@ -1322,7 +1328,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff8fa357d30&gt;]
 </pre></div>
 </div>
-<img alt="_images/4_lab_solved_59_1.png" src="_images/4_lab_solved_59_1.png" />
+<img alt="_images/4_lab_solved_60_1.png" src="_images/4_lab_solved_60_1.png" />
+</div>
 </div>
 </div>
 </div>
@@ -1358,7 +1365,7 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Category acquisition in an LoT</p>
+            <p class="prev-next-title">Case studies</p>
         </div>
     </a>
 </div>
