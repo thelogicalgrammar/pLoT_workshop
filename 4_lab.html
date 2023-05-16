@@ -1,0 +1,1173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category acquisition in an LoT &#8212; A Workshop on the pLoT</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Encoding binary sequences - solved lab" href="4_lab_solved.html" />
+    <link rel="prev" title="Lecture" href="4_lecture.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">A Workshop on the pLoT</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="howto.html">
+   Running code in labs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowledgments.html">
+   Acknowledgments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="askquestion.html">
+   Ask a question!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readings.html">
+   Suggested readings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_refresher.html">
+   Python refresher: Part I
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1_topfile.html">
+   Session 1 - The Big Idea
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_lecture.html">
+     Lecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1_lab.html">
+     Lab
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2_topfile.html">
+   Session 2 - The technical background
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_lecture.html">
+     Lecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_lab.html">
+     Formal Grammars
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3_topfile.html">
+   Session 3 - LOTlib3
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_lecture.html">
+     Lecture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_lab.html">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="4_topfile.html">
+   Session 4 - Applications
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_lecture.html">
+     Lecture
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Category acquisition in an LoT
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_lab_solved.html">
+     Encoding binary sequences - solved lab
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/4_lab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/thelogicalgrammar/pLoT_workshop"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/thelogicalgrammar/pLoT_workshop/issues/new?title=Issue%20on%20page%20%2F4_lab.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/thelogicalgrammar/pLoT_workshop/master?urlpath=tree/book/4_lab.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/thelogicalgrammar/pLoT_workshop/blob/master/book/4_lab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Category acquisition in an LoT
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-model">
+     The model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-primitives">
+     Logical primitives
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grammar">
+     Grammar
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hypothesis">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-inference">
+     Run inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoding-binary-sequences">
+   Encoding binary sequences
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     The model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-functions">
+   Learning functions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     The model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Category acquisition in an LoT</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Category acquisition in an LoT
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-model">
+     The model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-primitives">
+     Logical primitives
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grammar">
+     Grammar
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hypothesis">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-inference">
+     Run inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encoding-binary-sequences">
+   Encoding binary sequences
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     The model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-functions">
+   Learning functions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     The model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="category-acquisition-in-an-lot">
+<h1>Category acquisition in an LoT<a class="headerlink" href="#category-acquisition-in-an-lot" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><strong><strong>NOTE</strong></strong> This is based on Piantadosi’s example <a class="reference external" href="https://github.com/piantado/LOTlib3/blob/master/Examples/RationalRules/Model.py">here</a></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># in colab</span>
+    <span class="kn">import</span> <span class="nn">google.colab</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;In colab, downloading LOTlib3&#39;</span><span class="p">)</span>
+    <span class="o">!</span>git clone https://github.com/thelogicalgrammar/LOTlib3
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># not in colab</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in colab!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not in colab!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<p>First we need to import a bunch of stuff:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">LOTlib3.Miscellaneous</span> <span class="kn">import</span> <span class="n">q</span><span class="p">,</span> <span class="n">random</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Grammar</span> <span class="kn">import</span> <span class="n">Grammar</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.DataAndObjects</span> <span class="kn">import</span> <span class="n">FunctionData</span><span class="p">,</span> <span class="n">Obj</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Hypotheses.LOTHypothesis</span> <span class="kn">import</span> <span class="n">LOTHypothesis</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Hypotheses.Priors.RationalRules</span> <span class="kn">import</span> <span class="n">RationaRulesPrior</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Hypotheses.Likelihoods.BinaryLikelihood</span> <span class="kn">import</span> <span class="n">BinaryLikelihood</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Eval</span> <span class="kn">import</span> <span class="n">primitive</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Miscellaneous</span> <span class="kn">import</span> <span class="n">qq</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.TopN</span> <span class="kn">import</span> <span class="n">TopN</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Samplers.MetropolisHastings</span> <span class="kn">import</span> <span class="n">MetropolisHastingsSampler</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/mnt/c/Users/faust/Dropbox/teaching/pLoT_workshop/book/LOTlib3/Miscellaneous.py:190: SyntaxWarning: &quot;is not&quot; with a literal. Did you mean &quot;!=&quot;?
+  and (slot is not &quot;__doc__&quot;) and (slot is not &quot;__module__&quot;):
+/mnt/c/Users/faust/Dropbox/teaching/pLoT_workshop/book/LOTlib3/Miscellaneous.py:190: SyntaxWarning: &quot;is not&quot; with a literal. Did you mean &quot;!=&quot;?
+  and (slot is not &quot;__doc__&quot;) and (slot is not &quot;__module__&quot;):
+/mnt/c/Users/faust/Dropbox/teaching/pLoT_workshop/book/LOTlib3/FunctionNode.py:833: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+  assert name is &#39;lambda&#39;
+/mnt/c/Users/faust/Dropbox/teaching/pLoT_workshop/book/LOTlib3/Primitives/Semantics.py:31: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+  if    x is &quot;undefT&quot;: return True
+/mnt/c/Users/faust/Dropbox/teaching/pLoT_workshop/book/LOTlib3/Primitives/Semantics.py:32: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+  elif  x is &quot;undefF&quot;: return False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-model">
+<h2>The model<a class="headerlink" href="#the-model" title="Permalink to this headline">¶</a></h2>
+<p>This is a version of the model in the paper we have discussed in class. The learner sees a series of objects and learns a posterior over logical expressions, where each logical expression encodes a category.</p>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>First, we need a function to generate the data. This is the function that Piantadosi uses:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_data</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.999</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+        <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+        <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;triangle&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+        <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;triangle&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="p">]</span><span class="o">*</span><span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>But we can easily write other functions, e.g., one that randomly selects datapoints:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_data</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.999</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+            <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+            <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;triangle&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">),</span>
+            <span class="n">FunctionData</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">[</span><span class="n">Obj</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;triangle&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)],</span> <span class="n">output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+        <span class="p">],</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">n</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s test it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">make_data</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&lt;&lt;OBJECT: shape=square color=blue &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=triangle color=red &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=triangle color=red &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=square color=blue &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=square color=red &gt; -&gt; True&gt;,
+       &lt;&lt;OBJECT: shape=triangle color=red &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=triangle color=blue &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=triangle color=blue &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=triangle color=blue &gt; -&gt; False&gt;,
+       &lt;&lt;OBJECT: shape=square color=blue &gt; -&gt; False&gt;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="logical-primitives">
+<h2>Logical primitives<a class="headerlink" href="#logical-primitives" title="Permalink to this headline">¶</a></h2>
+<p>These primitives are also defined in <code class="docutils literal notranslate"><span class="pre">LOTlib3.Primitives.Features</span></code> but I am reporting them here for completeness:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@primitive</span>
+<span class="k">def</span> <span class="nf">is_color_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> 
+    <span class="c1"># simply check that the color attribute of</span>
+    <span class="c1"># the object is y</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">color</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nd">@primitive</span>
+<span class="k">def</span> <span class="nf">is_shape_</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As described in the introductory file for LOTlib3, the decorator <code class="docutils literal notranslate"><span class="pre">&#64;primitive</span></code> allows us to use a function as a terminal in our grammar.</p>
+</div>
+<div class="section" id="grammar">
+<h2>Grammar<a class="headerlink" href="#grammar" title="Permalink to this headline">¶</a></h2>
+<p>The grammar that encodes ‘Disjunctive Normal Form’ can be found in <code class="docutils literal notranslate"><span class="pre">DefaultGrammars.py</span></code> (and imported with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">LOTlib3.DefaultGrammars</span> <span class="pre">import</span> <span class="pre">DNF</span></code>), but I am reporting it here for completeness:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DEFAULT_FEATURE_WEIGHT</span> <span class="o">=</span> <span class="mf">5.</span>
+
+<span class="n">grammar</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">()</span>
+<span class="c1"># NOTE: empty name argument is interpreted as a function with an &#39;empty&#39; name</span>
+<span class="c1"># so it just works to add brackets around DISJ</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;START&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;DISJ&#39;</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;START&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">],</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;START&#39;</span><span class="p">,</span> <span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;START&#39;</span><span class="p">,</span> <span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;DISJ&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>     <span class="p">[</span><span class="s1">&#39;CONJ&#39;</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;DISJ&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>     <span class="p">[</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">],</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;DISJ&#39;</span><span class="p">,</span> <span class="s1">&#39;or_&#39;</span><span class="p">,</span>  <span class="p">[</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">,</span> <span class="s1">&#39;DISJ&#39;</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;CONJ&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>     <span class="p">[</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">],</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;CONJ&#39;</span><span class="p">,</span> <span class="s1">&#39;and_&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">,</span> <span class="s1">&#39;CONJ&#39;</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="c1"># A pre-predicate is how we treat negation</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">,</span> <span class="s1">&#39;not_&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PREDICATE&#39;</span><span class="p">],</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;PRE-PREDICATE&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>     <span class="p">[</span><span class="s1">&#39;PREDICATE&#39;</span><span class="p">],</span> <span class="n">DEFAULT_FEATURE_WEIGHT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PRE-PREDICATE -&gt; [&#39;PREDICATE&#39;]	w/ p=5.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also need some predicates so that the grammar can interact with the observations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Two predicates for checking x&#39;s color and shape</span>
+<span class="c1"># Note: per style, functions in the LOT end in _</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;PREDICATE&#39;</span><span class="p">,</span> <span class="s1">&#39;is_color_&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;COLOR&#39;</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;PREDICATE&#39;</span><span class="p">,</span> <span class="s1">&#39;is_shape_&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;SHAPE&#39;</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="c1"># Some colors/shapes each (for this simple demo)</span>
+<span class="c1"># These are written in quotes so they can be evaled</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;COLOR&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;COLOR&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;COLOR&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;COLOR&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;mauve&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;SHAPE&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;square&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;SHAPE&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;circle&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;SHAPE&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;triangle&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;SHAPE&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">(</span><span class="s1">&#39;diamond&#39;</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHAPE -&gt; &#39;diamond&#39;	w/ p=1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Look at some example of sentences generated by the grammar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hyp</span> <span class="o">=</span> <span class="n">grammar</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+<span class="n">hyp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>not_(is_color_(x, &#39;red&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hypothesis">
+<h2>Hypothesis<a class="headerlink" href="#hypothesis" title="Permalink to this headline">¶</a></h2>
+<p>The hypothesis class in Piantadosi’s code inherits from <code class="docutils literal notranslate"><span class="pre">RationalRulesPrior</span></code>, which implements a model from Goodman et al 2008, <em>A Rational Analysis of Rule-Based Concept Learning</em>. However, we found that that wasn’t working right so I am just removing it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyHypothesis</span><span class="p">(</span><span class="n">BinaryLikelihood</span><span class="p">,</span> <span class="n">LOTHypothesis</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        
+        <span class="c1"># note that our grammar defined above is passed to </span>
+        <span class="c1"># MyHypothesis here</span>
+        <span class="n">LOTHypothesis</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grammar</span><span class="o">=</span><span class="n">grammar</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        
+        <span class="c1"># this is a parameter from the model in Goodman et al 2008</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rrAlpha</span><span class="o">=</span><span class="mf">2.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>With this, we can generate hypotheses from the grammar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hypothesis</span> <span class="o">=</span> <span class="n">MyHypothesis</span><span class="p">()</span>
+<span class="n">hypothesis</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lambda x: is_color_(x, &#39;green&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>And use them, e.g., to calculate the likelihood of some data (here, the data sampled above):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">make_data</span><span class="p">()</span>
+<span class="n">hypothesis</span><span class="o">.</span><span class="n">compute_likelihood</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.0005001250416822429
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="run-inference">
+<h2>Run inference<a class="headerlink" href="#run-inference" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we can do inference and find the 10 highest posterior hypotheses:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h0</span> <span class="o">=</span> <span class="n">MyHypothesis</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">make_data</span><span class="p">()</span>
+<span class="n">top</span> <span class="o">=</span> <span class="n">TopN</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">h</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">MetropolisHastingsSampler</span><span class="p">(</span><span class="n">h0</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">10000</span><span class="p">)):</span>
+    <span class="n">top</span> <span class="o">&lt;&lt;</span> <span class="n">h</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And print them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">top</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">posterior_score</span><span class="p">,</span> <span class="n">h</span><span class="o">.</span><span class="n">prior</span><span class="p">,</span> <span class="n">h</span><span class="o">.</span><span class="n">likelihood</span><span class="p">,</span> <span class="n">qq</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-11.761285918026795 -4.158883083359667 -7.602402834667128 &quot;lambda x: is_color_(x, &#39;red&#39;)&quot;
+-10.08780960949681 -10.085809109330082 -0.0020005001667289714 &quot;lambda x: and_(is_color_(x, &#39;red&#39;), not_(is_shape_(x, &#39;triangle&#39;)))&quot;
+-10.08780960949681 -10.085809109330082 -0.0020005001667289714 &quot;lambda x: and_(is_shape_(x, &#39;square&#39;), not_(is_color_(x, &#39;blue&#39;)))&quot;
+-10.08780960949681 -10.085809109330082 -0.0020005001667289714 &quot;lambda x: and_(not_(is_shape_(x, &#39;triangle&#39;)), is_color_(x, &#39;red&#39;))&quot;
+-10.08780960949681 -10.085809109330082 -0.0020005001667289714 &quot;lambda x: and_(not_(is_color_(x, &#39;blue&#39;)), is_shape_(x, &#39;square&#39;))&quot;
+-9.682344501388645 -9.680344001221917 -0.0020005001667289714 &quot;lambda x: and_(not_(is_shape_(x, &#39;triangle&#39;)), not_(is_color_(x, &#39;blue&#39;)))&quot;
+-9.682344501388645 -9.680344001221917 -0.0020005001667289714 &quot;lambda x: and_(not_(is_color_(x, &#39;blue&#39;)), not_(is_shape_(x, &#39;triangle&#39;)))&quot;
+-9.682344501388645 -9.680344001221917 -0.0020005001667289714 &quot;lambda x: and_(is_color_(x, &#39;red&#39;), is_shape_(x, &#39;square&#39;))&quot;
+-9.682344501388645 -9.680344001221917 -0.0020005001667289714 &quot;lambda x: and_(is_shape_(x, &#39;square&#39;), is_color_(x, &#39;red&#39;))&quot;
+-8.988697195787019 -1.386294361119889 -7.602402834667129 &quot;lambda x: False&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top</span><span class="o">.</span><span class="n">best</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lambda x: False
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a nice scaffolding, but much more can be done with this model. Here’s some suggestions for the remainder of the class:</p>
+<blockquote>
+<div><p><strong><strong>EXERCISES</strong></strong></p>
+<ul class="simple">
+<li><p>Add a feature to the grammar and objects, e.g. <code class="docutils literal notranslate"><span class="pre">is_size_</span></code>.</p></li>
+<li><p>Add what we saw in the Piantadosi et al paper, namely a system where whether an object belongs to the category can depend on which other objects are present in the situation.</p>
+<ul>
+<li><p>In order to do this, you’ll have to expand the expressive power of the grammar to include (higher order) functions.</p></li>
+<li><p>NOTE: While this might seem a bit strange, we have similar phenomena in natural language. For instance, whether an object counts as ‘large’ or ‘small’ might depend on what other objects are relevant in the context. A ‘large’ mouse is smaller than a ‘small’ elephant.</p></li>
+</ul>
+</li>
+<li><p>Create and plot a ‘learning curve’:</p>
+<ul>
+<li><p>Produce some dataset with e.g., 200 examples from a certain true hypothesis.</p></li>
+<li><p>Create cumulative sets of data: <code class="docutils literal notranslate"><span class="pre">[data[:10],</span> <span class="pre">data[:20],</span> <span class="pre">data[:30],</span> <span class="pre">...]</span></code> (can also be written as <code class="docutils literal notranslate"><span class="pre">[data[:n]</span> <span class="pre">for</span> <span class="pre">n</span> <span class="pre">in</span> <span class="pre">range(10,</span> <span class="pre">200,</span> <span class="pre">10)]</span></code>). This simulates an experiment where the participant sees more and more of the data.</p></li>
+<li><p>Train the model on each data, so that we have a series of posteriors trained on increasingly large portions of the data.</p></li>
+<li><p>Plot the posterior probabilities of the overall most common hypotheses over time.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="encoding-binary-sequences">
+<h1>Encoding binary sequences<a class="headerlink" href="#encoding-binary-sequences" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># in colab</span>
+    <span class="kn">import</span> <span class="nn">google.colab</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;In colab, downloading LOTlib3&#39;</span><span class="p">)</span>
+    <span class="o">!</span>git clone https://github.com/piantado/LOTlib3
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># not in colab</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in colab!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not in colab!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>The model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>In the past few weeks, we have worker together through a few models in LOTlib3, but you still haven’t had a chance to see how to develop a model from scratch. Therefore, this week let’s try to replicate the model in Planton et al (2021) from scratch!</p>
+<p>The grammar is the following:</p>
+<ul class="simple">
+<li><p>Staying where one is (<code class="docutils literal notranslate"><span class="pre">+0</span></code>)</p></li>
+<li><p>Moving to the other item (denoted <code class="docutils literal notranslate"><span class="pre">b</span></code>)</p></li>
+<li><p>Repetition</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">^n</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is a number</p></li>
+<li><p>Possibly with a variation in the starting point</p></li>
+<li><p>Denoted by <code class="docutils literal notranslate"><span class="pre">&lt;x&gt;</span></code> where x is an elementary instruction, either <code class="docutils literal notranslate"><span class="pre">+0</span></code> or <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+</ul>
+</li>
+<li><p>Embedding of expressions is represented by brackets (<code class="docutils literal notranslate"><span class="pre">[.</span> <span class="pre">.</span> <span class="pre">..]</span></code>) and concatenation by commas (<code class="docutils literal notranslate"><span class="pre">,</span></code>)</p></li>
+</ul>
+<p>Each sentence generated by this grammar represents a binary sequence.</p>
+<p>Example from the paper:</p>
+<img src="imgs/binaryEx.png" />
+<blockquote>
+<div><p><strong><strong>AIMS</strong></strong></p>
+<ul class="simple">
+<li><p>Write the grammar described in the paper</p></li>
+<li><p>Define the appropriate Hypothesis class in LOTlib3</p></li>
+<li><p>Run inference on <em>partial</em> sequences</p>
+<ul>
+<li><p>e.g., we only see the first few elements of the sequence and we have to guess the rest</p></li>
+</ul>
+</li>
+<li><p>Run inference on <em>noisy</em> sequences</p>
+<ul>
+<li><p>e.g., we see the full sequence, but some elements might have been switched</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="learning-functions">
+<h1>Learning functions<a class="headerlink" href="#learning-functions" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># in colab</span>
+    <span class="kn">import</span> <span class="nn">google.colab</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;In colab, downloading LOTlib3&#39;</span><span class="p">)</span>
+    <span class="o">!</span>git clone https://github.com/piantado/LOTlib3
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># not in colab</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in colab!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not in colab!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Imports<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>First we need to import a bunch of stuff:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">LOTlib3.Miscellaneous</span> <span class="kn">import</span> <span class="n">q</span><span class="p">,</span> <span class="n">random</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Grammar</span> <span class="kn">import</span> <span class="n">Grammar</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.DataAndObjects</span> <span class="kn">import</span> <span class="n">FunctionData</span><span class="p">,</span> <span class="n">Obj</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Hypotheses.LOTHypothesis</span> <span class="kn">import</span> <span class="n">LOTHypothesis</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Hypotheses.Likelihoods.BinaryLikelihood</span> <span class="kn">import</span> <span class="n">BinaryLikelihood</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Eval</span> <span class="kn">import</span> <span class="n">primitive</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Miscellaneous</span> <span class="kn">import</span> <span class="n">qq</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.TopN</span> <span class="kn">import</span> <span class="n">TopN</span>
+<span class="kn">from</span> <span class="nn">LOTlib3.Samplers.MetropolisHastings</span> <span class="kn">import</span> <span class="n">MetropolisHastingsSampler</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>The model<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>The aim here is to define a language that recovers the explicit form for a mathematical function most likely to have generated a certain set of input-output pairs.</p>
+<p>For instance, to start with we might want: addition, product, power, log, exp.</p>
+<p>If we want to make it fancier, we can add recursion up to a level (which allows us to do e.g. series)</p>
+<blockquote>
+<div><p><strong><strong>AIMS</strong></strong></p>
+<ul class="simple">
+<li><p>Pick a set of mathematical primitives that seem likely</p></li>
+<li><p>Define a grammar</p></li>
+<li><p>Define likelihood, e.g., sum of squares minimization</p></li>
+<li><p>Run inference algo on the example datasets below!</p></li>
+</ul>
+</div></blockquote>
+<p>Some hidden data to recover (Don’t look at it yet!)</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">[</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">,</span> <span class="n">f3</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data: &#39;</span><span class="p">)</span>
+    <span class="n">pprint</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: 
+array([[ 1.        ,  0.96693628],
+       [ 1.65517241,  0.44488931],
+       [ 2.31034483,  0.11111997],
+       [ 2.96551724, -0.05388751],
+       [ 3.62068966, -0.08770159],
+       [ 4.27586207, -0.34701368],
+       [ 4.93103448, -0.5312597 ],
+       [ 5.5862069 , -0.56654964],
+       [ 6.24137931, -0.98309806],
+       [ 6.89655172, -0.87024759],
+       [ 7.55172414, -1.02468311],
+       [ 8.20689655, -1.07690071],
+       [ 8.86206897, -1.3229659 ],
+       [ 9.51724138, -1.26628302],
+       [10.17241379, -1.26076366],
+       [10.82758621, -1.29232939],
+       [11.48275862, -1.47545188],
+       [12.13793103, -1.53730544],
+       [12.79310345, -1.72121669],
+       [13.44827586, -1.59430107],
+       [14.10344828, -1.6440229 ],
+       [14.75862069, -1.74346587],
+       [15.4137931 , -1.89063419],
+       [16.06896552, -1.87860771],
+       [16.72413793, -1.73337155],
+       [17.37931034, -1.74285824],
+       [18.03448276, -1.82462328],
+       [18.68965517, -2.13664592],
+       [19.34482759, -1.87158473],
+       [20.        , -1.96221768]])
+</pre></div>
+</div>
+<img alt="_images/4_lab_55_1.png" src="_images/4_lab_55_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: 
+array([[1.00000000e+00, 3.71191585e+00],
+       [1.65517241e+00, 9.24602588e+00],
+       [2.31034483e+00, 1.71111810e+01],
+       [2.96551724e+00, 2.74461376e+01],
+       [3.62068966e+00, 4.04248405e+01],
+       [4.27586207e+00, 5.58883272e+01],
+       [4.93103448e+00, 7.39602616e+01],
+       [5.58620690e+00, 9.45716098e+01],
+       [6.24137931e+00, 1.17768463e+02],
+       [6.89655172e+00, 1.43745608e+02],
+       [7.55172414e+00, 1.72014815e+02],
+       [8.20689655e+00, 2.03113066e+02],
+       [8.86206897e+00, 2.36586296e+02],
+       [9.51724138e+00, 2.72592478e+02],
+       [1.01724138e+01, 3.11500578e+02],
+       [1.08275862e+01, 3.52680831e+02],
+       [1.14827586e+01, 3.96347343e+02],
+       [1.21379310e+01, 4.42937224e+02],
+       [1.27931034e+01, 4.91952665e+02],
+       [1.34482759e+01, 5.43415913e+02],
+       [1.41034483e+01, 5.97790718e+02],
+       [1.47586207e+01, 6.54449584e+02],
+       [1.54137931e+01, 7.13693393e+02],
+       [1.60689655e+01, 7.75636386e+02],
+       [1.67241379e+01, 8.39996211e+02],
+       [1.73793103e+01, 9.07024122e+02],
+       [1.80344828e+01, 9.76727694e+02],
+       [1.86896552e+01, 1.04889184e+03],
+       [1.93448276e+01, 1.12381860e+03],
+       [2.00000000e+01, 1.20102847e+03]])
+</pre></div>
+</div>
+<img alt="_images/4_lab_55_3.png" src="_images/4_lab_55_3.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: 
+array([[   1.        ,    3.4938151 ],
+       [   1.65517241,    5.44628788],
+       [   2.31034483,    6.53998577],
+       [   2.96551724,    7.67421996],
+       [   3.62068966,    7.89516258],
+       [   4.27586207,    8.02252067],
+       [   4.93103448,    7.55957521],
+       [   5.5862069 ,    6.68554562],
+       [   6.24137931,    5.49661335],
+       [   6.89655172,    3.78650889],
+       [   7.55172414,    1.76357834],
+       [   8.20689655,   -0.95288503],
+       [   8.86206897,   -3.56660826],
+       [   9.51724138,   -7.30943747],
+       [  10.17241379,  -11.0152518 ],
+       [  10.82758621,  -15.41306886],
+       [  11.48275862,  -20.02607231],
+       [  12.13793103,  -25.05703701],
+       [  12.79310345,  -30.66109506],
+       [  13.44827586,  -36.58291196],
+       [  14.10344828,  -43.09300853],
+       [  14.75862069,  -49.80759178],
+       [  15.4137931 ,  -57.20869912],
+       [  16.06896552,  -64.76773707],
+       [  16.72413793,  -72.90556438],
+       [  17.37931034,  -81.42918673],
+       [  18.03448276,  -90.50159589],
+       [  18.68965517,  -99.98277275],
+       [  19.34482759, -109.61216676],
+       [  20.        , -120.07684039]])
+</pre></div>
+</div>
+<img alt="_images/4_lab_55_5.png" src="_images/4_lab_55_5.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "plot"
+        },
+        kernelOptions: {
+            kernelName: "plot",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'plot'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="4_lecture.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lecture</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="4_lab_solved.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Encoding binary sequences - solved lab</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Fausto Carcassi<br/>
+    
+        &copy; Copyright 2023.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
