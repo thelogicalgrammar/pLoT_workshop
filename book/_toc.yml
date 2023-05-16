@@ -1,0 +1,48 @@
+# Table of contents
+format: jb-book
+root: intro
+
+parts:
+- caption: Introduction
+  chapters:
+    - file: howto 
+      title: Running code in labs
+    - file: acknowledgments
+    - file: askquestion
+    - file: readings.md
+      title: Suggested readings
+    - file: python_refresher
+      title: Python refresher
+
+- caption: Content
+  chapters:
+    - file: 1_topfile
+      title: Session 1 - The Big Idea
+      sections:
+        - file: 1_lecture
+          title: Lecture
+        - file: 1_lab
+          title: Lab
+    - file: 2_topfile
+      title: Session 2 - The technical background
+      sections:
+        - file: 2_lecture
+          title: Lecture
+        - file: 2_lab
+          title: Lab
+    - file: 3_topfile
+      title: Session 3 - LOTlib3
+      sections:
+        - file: 3_lecture
+          title: Lecture
+        - file: 3_lab
+          title: Lab
+    - file: 4_topfile
+      title: Session 4 - Applications
+      sections:
+        - file: 4_lecture
+          title: Lecture
+        - file: 4_lab
+          title: Lab
+        - file: 4_lab_solved
+          title: Lab (solved)
