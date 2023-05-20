@@ -436,11 +436,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#on-googling-problems">
-   On googling problems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#some-exercises">
    Some exercises
   </a>
@@ -525,6 +520,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
    Some exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-googling-problems">
+   On googling problems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -650,11 +650,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#on-googling-problems">
-   On googling problems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#some-exercises">
    Some exercises
   </a>
@@ -742,6 +737,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-googling-problems">
+   On googling problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#one-more-word-on-programming">
    One more word on programming
   </a>
@@ -758,7 +758,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="python-refresher">
 <h1>Python refresher<a class="headerlink" href="#python-refresher" title="Permalink to this headline">¶</a></h1>
 <p>Hello everyone!</p>
-<p>The first two labs are going to be just an introduction to python. It’s not feasible to become familiar with programming in just two weeks, so this is meant more for people who have had previous experience with programming but might need a refresher. These are just the minimal requirements to follow the rest of the course, and it would be great if you could try to really internalize it and become familiar with it. You do this by going through the lab multiple times, or by looking at other introductions ot python on the internet. The latter might make more sense because the particular way I have to explain this stuff might not click with you; seeing different approaches is always useful.</p>
+<p>It’s not feasible to become familiar with programming with a single notebook, so this is meant more for people who have had previous experience with programming but might need a refresher. These are just the minimal requirements to follow the implementation detail for the rest of the workshop, but you don’t <em>need</em> it to follow. Alternatively, you can go through this notebook multiple times, or look at other introductions ot python on the internet. The latter might make more sense because the particular way I have to explain this stuff might not click with you; seeing different approaches is always useful.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Much of what I will say here is not strictly true from a programming point of view, but it is true enough for our purposes. If you want to know more I can give you pointers for more in-depth treatments.</p>
 </div></blockquote>
@@ -1364,15 +1364,6 @@ True
 <p>Objects can be all sorts of things in python (and you use the dot for things that aren’t objects, too), and this is a huge topic. But I hope that this gives you a first intuition.</p>
 <p>In practice, you’ll soon encounter this when using a library. After we import a library, e.g., we import numpy with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>, we can access the things defined within the library with the dot notation. For instance, if we want to get the function <code class="docutils literal notranslate"><span class="pre">sum</span></code> from numpy, we could write <code class="docutils literal notranslate"><span class="pre">np.sum</span></code></p>
 </div>
-<div class="section" id="on-googling-problems">
-<h2>On googling problems<a class="headerlink" href="#on-googling-problems" title="Permalink to this headline">¶</a></h2>
-<p>Finally, a short comment on googling stuff. Finding stuff on google is an absolutely social skill for programming, whether you get an error and you have no idea what it means or you need to finds a way of doing something complicated. An important part of this skill is to learn how to <em>phrase</em> your problem in a way that relevant results come up. This skill is hard to teach, and often you need several tries before something relevant comes up, but some words of advice:</p>
-<ul class="simple">
-<li><p>Python is incredibly popular and the community is huge. If you have a problem, it’s most likely that someone else already had it and there’s a discussion / solution out there on the internet.</p></li>
-<li><p>Don’t try to google your whole problem. Think whether you can break it down in smaller problems and google the smaller ones. While it’s possible that nobody was in the exact same situation as you, the features of your situation probably are pretty common. To give an extreme example, if you encounter a programming problem in this course you wouldn’t google ‘Fausto probabilistic LoT why is sum not working’, but rather just something about the sum. <em>Think what’s essential to your problem</em>.</p></li>
-<li><p>Googling technical questions is not necessarily ‘cheating’, and normal programming involves constant googling. You need to ask yourself if the googling you are doing is a normal part of the programming. A possible rule of thumb in the context of this course is: Think about how much time you can spend on the exercise, if you have a problem stop and think before you google, but if you feel you’re stuck and can’t finish within the self-allotted time or if you don’t see a way to proceed after a good think, google it.</p></li>
-</ul>
-</div>
 <div class="section" id="some-exercises">
 <h2>Some exercises<a class="headerlink" href="#some-exercises" title="Permalink to this headline">¶</a></h2>
 <p>Please make sure you can do these exercises:</p>
@@ -1910,7 +1901,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_156_0.png" src="_images/python_refresher_156_0.png" />
+<img alt="_images/python_refresher_154_0.png" src="_images/python_refresher_154_0.png" />
 </div>
 </div>
 <p>Another important function is to draw line plots, called simply <code class="docutils literal notranslate"><span class="pre">plot</span></code>:</p>
@@ -1932,7 +1923,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_158_0.png" src="_images/python_refresher_158_0.png" />
+<img alt="_images/python_refresher_156_0.png" src="_images/python_refresher_156_0.png" />
 </div>
 </div>
 <p>Since we will be dealing with discrete variables a lot, it will be useful to also draw barplot, with the method <code class="docutils literal notranslate"><span class="pre">bar</span></code>:</p>
@@ -1954,7 +1945,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_160_0.png" src="_images/python_refresher_160_0.png" />
+<img alt="_images/python_refresher_158_0.png" src="_images/python_refresher_158_0.png" />
 </div>
 </div>
 <p>We will also need to know what we are plotting, so we need to change the labels on the x-axis:</p>
@@ -1986,7 +1977,7 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/python_refresher_162_0.png" src="_images/python_refresher_162_0.png" />
+<img alt="_images/python_refresher_160_0.png" src="_images/python_refresher_160_0.png" />
 </div>
 </div>
 </div>
@@ -2186,10 +2177,18 @@ n! &amp;= n \times (n-1)!
 <li><p>Google how to read a text file and print out its content. Write code that does this, but using the <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">except</span> <span class="pre">...</span></code> statements prints ‘File does not exist!’ if the file does not exist.</p></li>
 </ul>
 </div>
+<div class="section" id="on-googling-problems">
+<h2>On googling problems<a class="headerlink" href="#on-googling-problems" title="Permalink to this headline">¶</a></h2>
+<p>Finally, a short comment on googling stuff. Finding stuff on google is an absolutely social skill for programming, whether you get an error and you have no idea what it means or you need to finds a way of doing something complicated. An important part of this skill is to learn how to <em>phrase</em> your problem in a way that relevant results come up. This skill is hard to teach, and often you need several tries before something relevant comes up, but some words of advice:</p>
+<ul class="simple">
+<li><p>Python is incredibly popular and the community is huge. If you have a problem, it’s most likely that someone else already had it and there’s a discussion / solution out there on the internet.</p></li>
+<li><p>Don’t try to google your whole problem. Think whether you can break it down in smaller problems and google the smaller ones. While it’s possible that nobody was in the exact same situation as you, the features of your situation probably are pretty common. To give an extreme example, if you encounter a programming problem in this course you wouldn’t google ‘Fausto probabilistic LoT why is sum not working’, but rather just something about the sum. <em>Think what’s essential to your problem</em>.</p></li>
+<li><p>Googling technical questions is not necessarily ‘cheating’, and normal programming involves constant googling. You need to ask yourself if the googling you are doing is a normal part of the programming. A possible rule of thumb in the context of this course is: Think about how much time you can spend on the exercise, if you have a problem stop and think before you google, but if you feel you’re stuck and can’t finish within the self-allotted time or if you don’t see a way to proceed after a good think, google it.</p></li>
+</ul>
+</div>
 <div class="section" id="one-more-word-on-programming">
 <h2>One more word on programming<a class="headerlink" href="#one-more-word-on-programming" title="Permalink to this headline">¶</a></h2>
-<p>This was a super super condensed introduction / refresher on python, but of course it could only scratch the surface of the tip of the iceberg (metaphor parkour!).</p>
-<p>If this stuff was all familiar and easy peasy, steady on. However, if you found it new / difficult / confusing, I recommend that you try to familiarize yourself with these concepts as soon as possible. Also, let me know and if there is enough interest I can arrange a separate class for a more thorough introduction to programming.</p>
+<p>This was a super super condensed introduction / refresher on python, but of course it could only scratch the surface of the tip of the iceberg (metaphor parkour!). I hope you found it useful!</p>
 </div>
 </div>
 

@@ -14,7 +14,7 @@ Second method (more generalizable to other contexts)
 1. Open google colab by going to url 'https://colab.research.google.com/'
 1. You should see something like this:
 ![image](./imgs/colab_howto_1.png)
-1. Click on 'github' in the yellow bar and type 'thelogicalgrammar/pLoT_course' on the searchbar.
+1. Click on 'github' in the yellow bar and type 'thelogicalgrammar/pLoT_workshop' on the searchbar.
 1. A list of notebooks should appear, like this:
 ![image](./imgs/colab_howto_2.png)
 1. Click on the notebook you want to work with.
