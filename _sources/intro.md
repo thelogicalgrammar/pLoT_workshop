@@ -7,15 +7,16 @@ Some of the course uses [Steven Piantadosi](http://colala.berkeley.edu/people/pi
 
 ## Structure of the course
 
-The workshop is divided in four sections. The first section focuses on the foundations required to understand the modern approach to the pLoT. The second section contains little introductions to python, to formal grammars, to defining the semantics of a formal grammar, and to approximate Bayesian inference with Markov Chain Monte Carlo algorithms. The third section provides an introduction to the LOTlib3 library. The fourth section focuses on concept learning in a pLoT through a series of case studies.
+The workshop is divided in four sections. The first section focuses on the foundations required to understand the modern approach to the pLoT. The second section contains little introductions to Python, to formal grammars, and to approximate Bayesian inference. The third section provides an introduction to the LOTlib3 library. The fourth section focuses on concept learning in a pLoT through a series of case studies.
 
-| Section                                  | Start-end   | 
-| ---------------------------------------- |:-----------:|
-| Introduction: On the very idea of an LoT | 09:00-10:45 |
-| Technical background                     | 11:15-13:00 |
-| Lunch                                    | 13:00-14:00 |
-| The LOTlib3 library                      | 14:00-15:45 |
-| Case studies                             | 16:15-18:00 |
+| Section                                  | Start - end   | 
+| ---------------------------------------- |:-------------:|
+| Introduction: On the very idea of an LoT | 09:00 - 10:20 |
+| Technical background                     | 10:30 - 12:00 |
+| Lunch                                    | 12:00 - 14:00 |
+| Summary/Open discussion                  | 14:00 - 15:00 |
+| The LOTlib3 library                      | 15:00 - 16:45 |
+| Case studies                             | 16:15 - 18:00 |
 
 ## Table of contents
 
