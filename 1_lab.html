@@ -1,358 +1,1083 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The idea of a Language of Thought &#8212; A day w/ the pLoT</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Interpreted Probabilistic Context Free Grammars &#8212; A day w/ the pLoT</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-      
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_lab';</script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="The technical background" href="2_topfile.html" />
     <link rel="prev" title="Lecture" href="1_lecture.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">A day w/ the pLoT</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="howto.html">
-   Running code in labs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="acknowledgments.html">
-   Acknowledgments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="askquestion.html">
-   Ask a question!
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="readings.html">
-   Suggested readings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_refresher.html">
-   Python refresher
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="howto.html">Running code in labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="askquestion.html">Ask a question!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readings.html">Suggested readings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_refresher.html">Python refresher</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Content
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="1_topfile.html">
-   1 - The Big Idea
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Lab
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2_topfile.html">
-   2 - The technical background
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_lab.html">
-     Lab
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="3_topfile.html">
-   3 - LOTlib3
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_lab.html">
-     Introduction
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="4_topfile.html">
-   4 - Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_lab.html">
-     Lab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_lab_solved.html">
-     Lab (solved)
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="1_topfile.html">1 - The Big Idea</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_lecture.html">Lecture</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_topfile.html">2 - The technical background</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_lecture.html">Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_topfile.html">3 - LOTlib3</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_lecture.html">Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_lab.html">Introduction</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_topfile.html">4 - Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_lecture.html">Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_lab.html">Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_lab_solved.html">Lab (solved)</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/1_lab.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/thelogicalgrammar/pLoT_workshop"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/thelogicalgrammar/pLoT_workshop/issues/new?title=Issue%20on%20page%20%2F1_lab.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/thelogicalgrammar/pLoT_workshop/blob/master/book/1_lab.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/thelogicalgrammar/pLoT_workshop/master?urlpath=tree/book/1_lab.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/thelogicalgrammar/pLoT_workshop/blob/master/book/1_lab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thelogicalgrammar/pLoT_workshop" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thelogicalgrammar/pLoT_workshop/issues/new?title=Issue%20on%20page%20%2F1_lab.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_lab.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Interpreted Probabilistic Context Free Grammars</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-        </div>
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The idea of a Language of Thought</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
+            <div>
+                <h2> Contents </h2>
             </div>
-            
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-idea-of-a-language-of-thought">
-<h1>The idea of a Language of Thought<a class="headerlink" href="#the-idea-of-a-language-of-thought" title="Permalink to this headline">¶</a></h1>
-<p>TODO</p>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-grammars">Formal Grammars</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-new-piece-of-python-syntax-generators">A new piece of python syntax: generators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-classes">Using classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-grammars-class">Defining a grammars class</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-minimal-formulas-more-difficult">Finding minimal formulas (more difficult!)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-context-free-grammar">Probabilistic context-free grammar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-semantics">Formal semantics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-arithmetic-as-a-cfg">Basic arithmetic as a CFG</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-grammar">A simple grammar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-the-grammar">Interpreting the grammar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-cfg-to-a-pcfg">From a CFG to a PCFG</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-the-grammar">Expanding the grammar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
 </div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="interpreted-probabilistic-context-free-grammars">
+<h1>Interpreted Probabilistic Context Free Grammars<a class="headerlink" href="#interpreted-probabilistic-context-free-grammars" title="Permalink to this headline">#</a></h1>
+<section id="formal-grammars">
+<h2>Formal Grammars<a class="headerlink" href="#formal-grammars" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">choice</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="using-dictionaries">
+<h3>Using dictionaries<a class="headerlink" href="#using-dictionaries" title="Permalink to this headline">#</a></h3>
+<p>One simple and intuitive way of implementing a grammar in python is as a dictionary:</p>
+<ul class="simple">
+<li><p>The keys are the left hand side rules</p></li>
+<li><p>The values are lists containing the possible strings that can be substituted by the key</p></li>
+</ul>
+<blockquote>
+<div><p><strong>NOTE</strong>: To see why we need to use lists as values rather than using a different key for each rule, try to repeat the same key more than once. What happens?</p>
+</div></blockquote>
+<p>For instance, let’s write the grammar with the following rules:
+$<span class="math notranslate nohighlight">\(
+S \rightarrow aS | bS | \epsilon
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;aS&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;bS&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>One thing we can do with this way of defining grammars is writing a function that randomly applies rule until we get to a string consisting only of terminals:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># always start with the starting symbol</span>
+<span class="n">current_sentence</span> <span class="o">=</span> <span class="s1">&#39;S&#39;</span>
+<span class="c1"># while there is a non-terminal in the sentence</span>
+<span class="k">while</span> <span class="s1">&#39;S&#39;</span> <span class="ow">in</span> <span class="n">current_sentence</span><span class="p">:</span>
+    <span class="c1"># substitute the first occurrence of S</span>
+    <span class="c1"># with a randomly chosen substitution rule</span>
+    <span class="n">current_sentence</span> <span class="o">=</span> <span class="n">current_sentence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+        <span class="s1">&#39;S&#39;</span><span class="p">,</span> 
+        <span class="n">choice</span><span class="p">((</span><span class="n">grammar</span><span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">])),</span>
+        <span class="c1"># NOTE: in this particular case there will always</span>
+        <span class="c1"># only be one S, but this is not true for </span>
+        <span class="c1"># all grammars!</span>
+        <span class="mi">1</span>
+    <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;String: &#39;</span><span class="p">,</span> <span class="n">current_sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>String:  abaaa
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write a function that takes a grammar, a set of terminals, and a set of nonterminals, and determines where the grammar is in the Chomsky hierarchy (Spend about 20 minutes on this - if you see that you can do it, leave it!):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your function here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-new-piece-of-python-syntax-generators">
+<h3>A new piece of python syntax: generators<a class="headerlink" href="#a-new-piece-of-python-syntax-generators" title="Permalink to this headline">#</a></h3>
+<p>Before we move onto defining classes to model grammars, which allow richer structures than dictionaries, we need to briefly talk about generators. A generator is basically <em>a function with a memory</em>, which can return multiple things in succession. Suppose you have a generator called <code class="docutils literal notranslate"><span class="pre">gen</span></code>. A typical use case is to use it in a construction like <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">gen():</span></code>, where <code class="docutils literal notranslate"><span class="pre">i</span></code> will take on in succession the values returned by the generator.</p>
+<p>The definition is almost like a function, except generators have the keyword <code class="docutils literal notranslate"><span class="pre">yield</span></code> where functions have <code class="docutils literal notranslate"><span class="pre">return</span></code>, and the execution doesn’t stop at the return but can continue as long as future yield are possible.</p>
+<p>The simple example is a generator that first yields (returns) 1 and then 2:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simple_generator</span><span class="p">():</span>
+    <span class="c1"># when getting things out of a generator,</span>
+    <span class="c1"># the generator will return in the order</span>
+    <span class="c1"># the yield statements are encountered</span>
+    
+    <span class="c1"># This is encountered first</span>
+    <span class="k">yield</span> <span class="mi">1</span>
+    <span class="c1"># Then this is encountered</span>
+    <span class="k">yield</span> <span class="mi">2</span>
+    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">simple_generator</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<p>A slightly more complex generator simply counts the odd integers starting with 1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">odd_counter</span><span class="p">():</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">odd_counter</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that generators can also call themselves, like functions. Then we get recursive generators:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Can you figure out what this generator does?</span>
+<span class="k">def</span> <span class="nf">recursive_gen</span><span class="p">(</span><span class="n">current_options</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">new_options</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">current_options</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">i</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">new_options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">([</span><span class="nb">sum</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">&gt;</span><span class="n">n</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">new_options</span><span class="p">]):</span>
+        <span class="k">return</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">recursive_gen</span><span class="p">(</span><span class="n">new_options</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">i</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">recursive_gen</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">]],</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 2, 2]
+[3, 1, 2]
+[3, 2, 1]
+[1, 1, 2, 2]
+[1, 2, 1, 2]
+[1, 2, 2, 1]
+[2, 1, 1, 2]
+[2, 1, 2, 1]
+[2, 2, 1, 1]
+[3, 1, 1, 1]
+[1, 1, 1, 1, 2]
+[1, 1, 1, 2, 1]
+[1, 1, 2, 1, 1]
+[1, 2, 1, 1, 1]
+[2, 1, 1, 1, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try to write the recursive_gen just as a normal function with <code class="docutils literal notranslate"><span class="pre">return</span></code> statements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-classes">
+<h3>Using classes<a class="headerlink" href="#using-classes" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p><strong>NOTE</strong>: Before you work on the exercise in ‘Defining a grammar class’ please have a look at the rest of the notebook. This should give you an idea of what you need to do with that class, and therefore how to structure them internally.</p>
+</div></blockquote>
+<section id="defining-a-grammars-class">
+<h4>Defining a grammars class<a class="headerlink" href="#defining-a-grammars-class" title="Permalink to this headline">#</a></h4>
+<p>Write a Grammar class to create context-free grammars. The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method should take a <code class="docutils literal notranslate"><span class="pre">start</span></code> argument with the starting nonterminal symbol.</p>
+<p>The class should also have the following method (i.e., function):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add_rule</span></code>: add a rule to the grammar. The arguments of <code class="docutils literal notranslate"><span class="pre">add_rule</span></code> are:</p>
+<ol class="arabic simple">
+<li><p>The nonterminal on the left-hand side of the rule</p></li>
+<li><p>The string on the right side of the rule, containing <code class="docutils literal notranslate"><span class="pre">%s</span></code> wherever a non-terminal appears</p></li>
+<li><p>A list of non-terminal symbols, one for each <code class="docutils literal notranslate"><span class="pre">%s</span></code>, saying which non-terminals correspond to each %s.</p></li>
+</ol>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### your class definition here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once this is defined, you should be able to run the following code to define the grammar for palindrome which we discussed in class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;a</span><span class="si">%s</span><span class="s1">a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">])</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;b</span><span class="si">%s</span><span class="s1">b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">])</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Define the palindrome grammar here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="finding-minimal-formulas-more-difficult">
+<h4>Finding minimal formulas (more difficult!)<a class="headerlink" href="#finding-minimal-formulas-more-difficult" title="Permalink to this headline">#</a></h4>
+<p>Now add another method <code class="docutils literal notranslate"><span class="pre">compute_first</span></code> to the class above which generates the <code class="docutils literal notranslate"><span class="pre">n</span></code> shortest strings in the language.</p>
+<p>You should be able to run for instance (given the palindrome grammar above):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span><span class="o">.</span><span class="n">compute_first</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which should print out:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aa</span>
+<span class="n">bb</span>
+<span class="n">aaaa</span>
+<span class="n">abba</span>
+<span class="n">baab</span>
+<span class="n">bbbb</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>HINT</strong>: Think about this as exploring a tree (branches separating whenever more than one rule can be applied), and use the power of recursion to explore the tree. The recursive function can take a ‘present’ layer (the strings at the current nesting level) and progressively build the next layer by applying every rule to every sentence with nonterminals in the current layer, while yielding the sentences that only contain terminals. Then, yield the results of running the function on the next layer in a loop.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Test compute_first here!</span>
+
+<span class="k">def</span> <span class="nf">enumerate_palindromes</span><span class="p">(</span><span class="n">layer</span><span class="p">):</span>
+    <span class="c1"># your function here</span>
+
+
+<span class="k">def</span> <span class="nf">compute_first</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">enumerate_palindromes</span><span class="p">([</span><span class="s1">&#39;S&#39;</span><span class="p">])):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compute_first</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aa
+bb
+aaaa
+abba
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="probabilistic-context-free-grammar">
+<h4>Probabilistic context-free grammar<a class="headerlink" href="#probabilistic-context-free-grammar" title="Permalink to this headline">#</a></h4>
+<p>Expand the Grammar class once more so that <code class="docutils literal notranslate"><span class="pre">add_rule</span></code> takes one more argument: The (unnormalized) probability of applying the rule rather than the other rules with the same left-hand side.</p>
+<p>The following code for instance redefines the palindrome grammar above but with probabilities:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;a</span><span class="si">%s</span><span class="s1">a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;b</span><span class="si">%s</span><span class="s1">b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;S&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">grammar</span><span class="o">.</span><span class="n">add_rule</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### your class definition here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Add a method <code class="docutils literal notranslate"><span class="pre">generate</span></code> to Grammar to generate a random string in the language by iteratively applying the rules according to the defined probabilities. The following code should run (but possibly give a different answer on different runs):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grammar</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>printing e.g.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aabbaa</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Test generate here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What happens when we increase…</p>
+<ul class="simple">
+<li><p>the probability of the rule <span class="math notranslate nohighlight">\(S \rightarrow aSa\)</span>?</p></li>
+<li><p>the probability of the rule <span class="math notranslate nohighlight">\(S \rightarrow bSb\)</span>?</p></li>
+<li><p>the probability of the rule <span class="math notranslate nohighlight">\(S \rightarrow \epsilon\)</span>?</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="formal-semantics">
+<h2>Formal semantics<a class="headerlink" href="#formal-semantics" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>ColabTurtlePlus
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ColabTurtlePlus in /home/fausto/anaconda3/envs/pLoT/lib/python3.10/site-packages (2.0.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">choice</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Put clearscreen() as the first line in a cell (after the import command) to re-run turtle commands in the cell
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the past few weeks, we have set up a picture where the mind encodes categories and other stuff with a Language of Thought, we have seen how we can formally define languages, and we have explored how they can be interpreted. However, you might not have realized yet how powerful these methods are in what they can express. This week, we’ll put it all together and see some case studies: a simple grammar for arithmetic, a grammar of shapes, and a grammar of sounds.</p>
+<p>Let’s start by defining a couple of useful functions (can ignore them for now and have a look when you encounter them below):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="c1"># Transform the array so that it sums to 1</span>
+    <span class="k">return</span> <span class="n">arr</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">apply_rule</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="n">grammar</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Accepts both PCFGs (where the keys of grammar</span>
+<span class="sd">    are lists of tuples (unnormalized prob, right hand side)</span>
+<span class="sd">    and CFGs (where the keys are lists of right hand side strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">match_txt</span> <span class="o">=</span> <span class="n">grammar</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># if PCFG</span>
+        <span class="n">probs</span><span class="p">,</span> <span class="n">subs</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">match_txt</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="c1"># if CFG</span>
+        <span class="n">subs</span> <span class="o">=</span> <span class="n">match_txt</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">subs</span><span class="p">)</span>
+    <span class="n">sub</span> <span class="o">=</span> <span class="n">choice</span><span class="p">(</span><span class="n">subs</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">normalize</span><span class="p">(</span><span class="n">probs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">sub</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="basic-arithmetic-as-a-cfg">
+<h3>Basic arithmetic as a CFG<a class="headerlink" href="#basic-arithmetic-as-a-cfg" title="Permalink to this headline">#</a></h3>
+<section id="a-simple-grammar">
+<h4>A simple grammar<a class="headerlink" href="#a-simple-grammar" title="Permalink to this headline">#</a></h4>
+<p>Before we get onto interpreting sentences from the grammar, we need a grammar to produce sentences with. For simplicity, we will encode the language as a dictionary. The keys are the left-hand side of substitution rules, the values a list of possible right-hand sides.</p>
+<blockquote>
+<div><p><strong>NOTE</strong> We will put non-terminals between angle brackets, e.g. <code class="docutils literal notranslate"><span class="pre">'&lt;S&gt;'</span></code> to simplify parsing the strings.</p>
+</div></blockquote>
+<p>Let’s construct a very simple grammar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CFG_arithmetic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;plusOne(&lt;S&gt;)&#39;</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will also need some way of generating random strings from the grammar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">grammar</span><span class="p">):</span>
+    <span class="c1"># if there are still &#39;&lt;&#39; that means there are still nonterminals</span>
+    <span class="k">while</span> <span class="s1">&#39;&lt;&#39;</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+        <span class="c1"># substitute the first nonterminal applying </span>
+        <span class="c1"># one of the rules in the grammar</span>
+        <span class="n">sentence</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span>
+            <span class="c1"># Greedy search of an expression between</span>
+            <span class="c1"># angle brackets.</span>
+            <span class="s1">&#39;&lt;(.*?)&gt;&#39;</span><span class="p">,</span> 
+            <span class="k">lambda</span> <span class="n">match</span><span class="p">:</span> <span class="n">apply_rule</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="n">grammar</span><span class="p">),</span> 
+            <span class="n">sentence</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">sentence</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So for example let’s produce a random string:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">complete</span><span class="p">(</span><span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">,</span> <span class="n">CFG_arithmetic</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;plusOne(plusOne(plusOne(plusOne(one))))&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that even though we have a sentence now and we have an <em>intuitive</em> sense of what it could mean, we still need a way of implementing the interpretation in python. So let’s do that!</p>
+</section>
+<section id="interpreting-the-grammar">
+<h4>Interpreting the grammar<a class="headerlink" href="#interpreting-the-grammar" title="Permalink to this headline">#</a></h4>
+<p>We will use <span class="math notranslate nohighlight">\(\lambda\)</span> expressions to encode the meaning of our operators. Thankfully this is made quite easy by Python’s lambda syntax, which we have seen a couple of weeks ago. We want to interpret the very simple arithmetic language defined above. We assume a type system with:</p>
+<ul class="simple">
+<li><p>One primitive type <span class="math notranslate nohighlight">\(n\)</span>, the type of integers.</p></li>
+<li><p>Function types defined inductively: <span class="math notranslate nohighlight">\(&lt;\alpha, \beta&gt;\)</span> is the set of functions from things of type <span class="math notranslate nohighlight">\(\alpha\)</span> to things of type <span class="math notranslate nohighlight">\(\beta\)</span>.</p></li>
+</ul>
+<p>We can give meanings to all the terminals in our language. We do this in a dictionary: the keys are the terminals of our grammar and the values are the meanings, written as <span class="math notranslate nohighlight">\(\lambda\)</span> expressions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meanings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># type n</span>
+    <span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="c1"># type &lt;n,n&gt;</span>
+    <span class="s1">&#39;plusOne&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our primitives can be applied to each other in a way consistent with their types:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># n to n</span>
+<span class="n">meanings</span><span class="p">[</span><span class="s1">&#39;plusOne&#39;</span><span class="p">](</span>
+    <span class="c1"># n to n</span>
+    <span class="n">meanings</span><span class="p">[</span><span class="s1">&#39;plusOne&#39;</span><span class="p">](</span>
+        <span class="c1"># n</span>
+        <span class="n">meanings</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the primitives in the language are defined, we can also write a string in the language as a python string, e.g., <code class="docutils literal notranslate"><span class="pre">'plusOne(one)'</span></code>. This is useful when e.g. building random strings from the language. However, we need a way to go from the string to the <em>interpreted</em> string. For this, we exploit python’s own interpreter via the keyword <code class="docutils literal notranslate"><span class="pre">eval</span></code>. Python’s <code class="docutils literal notranslate"><span class="pre">eval</span></code> function plays the role of the interpretation function which we discussed in class, but it allows us to not take care of parsing brackets (going from a string to the underlying parse tree to interpret).</p>
+<blockquote>
+<div><p><strong>NOTE</strong> It is generally not recommended to use Python’s <code class="docutils literal notranslate"><span class="pre">eval</span></code>. We will use it here only to evaluate sentences in our hand-made grammars, but never let it evaluate something you don’t understand! We can pass <code class="docutils literal notranslate"><span class="pre">meanings</span></code> as the second argument of <code class="docutils literal notranslate"><span class="pre">eval</span></code> to tell it which symbols to interpret.</p>
+</div></blockquote>
+<p>Let’s see a simple example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;plusOne(plusOne(one))&#39;</span><span class="p">,</span> <span class="n">meanings</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have a way of generating random strings from our gramnmar, as well as interpreting them. Therefore, we can study what happens when we produce a bunch of random strings. For instance, we can ask: what’s the distribution of numbers produced by our PCFG?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot distribution of numbers obtained with this grammar</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">eval</span><span class="p">(</span><span class="n">complete</span><span class="p">(</span><span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">,</span> <span class="n">CFG_arithmetic</span><span class="p">),</span> <span class="n">meanings</span><span class="p">)</span> 
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cfb5413e1026406ada373472b284dcb2e1eee6542fdc3e85e30f854a2a31b7f9.png" src="_images/cfb5413e1026406ada373472b284dcb2e1eee6542fdc3e85e30f854a2a31b7f9.png" />
+</div>
+</div>
+<p>Turns out the probability of each number <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(2^{-n}\)</span>. Can you tell why?</p>
+</section>
+<section id="from-a-cfg-to-a-pcfg">
+<h4>From a CFG to a PCFG<a class="headerlink" href="#from-a-cfg-to-a-pcfg" title="Permalink to this headline">#</a></h4>
+<p>In practice, we’ll mostly work with <em>probabilistic</em> context free grammars. The idea here is that for each nonterminal we specify the probability of each possible substitution. A natural way of doing this here is, instead of having simply a list of possible substitutions as the value of the grammar dictionary, we have a list of tuples. The first element of each tuple is the (unnormalized) probability of that substitution rule, the second element is the actual right-hand side.</p>
+<p>Applying this to our simple arithmetic grammar above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CFG_arithmetic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;plusOne(&lt;S&gt;)&#39;</span><span class="p">),</span> 
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our function <code class="docutils literal notranslate"><span class="pre">complete</span></code> still works, but now applies substitution rules with the given probabilities:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">complete</span><span class="p">(</span><span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">,</span> <span class="n">CFG_arithmetic</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;plusOne(plusOne(plusOne(plusOne(one))))&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="expanding-the-grammar">
+<h4>Expanding the grammar<a class="headerlink" href="#expanding-the-grammar" title="Permalink to this headline">#</a></h4>
+<p>Our simple arithmetical grammar is cool and all, but extremely small. Let’s enrich it slightly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CFG_arithmetic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;plusOne(&lt;S&gt;)&#39;</span><span class="p">),</span> 
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">),</span>
+        <span class="c1"># NEW!</span>
+        <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="s1">&#39;plus(&lt;S&gt;)(&lt;S&gt;)&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="s1">&#39;minus(&lt;S&gt;)(&lt;S&gt;)&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CFG_arithmetic</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;&lt;S&gt;&#39;: [(1, &#39;plusOne(&lt;S&gt;)&#39;),
+  (1, &#39;one&#39;),
+  (0.3, &#39;plus(&lt;S&gt;)(&lt;S&gt;)&#39;),
+  (0.3, &#39;minus(&lt;S&gt;)(&lt;S&gt;)&#39;)]}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also need to add the meaning of the new terminals:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type &lt;n,&lt;n,n&gt;&gt;</span>
+<span class="n">meanings</span><span class="p">[</span><span class="s1">&#39;plus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="c1"># type &lt;n,&lt;n,n&gt;&gt;</span>
+<span class="n">meanings</span><span class="p">[</span><span class="s1">&#39;minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make sure that we can interpret the strings produces by the expanded grammar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;plus(plusOne(plusOne(one)))(plusOne(one))&#39;</span><span class="p">,</span> <span class="n">meanings</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s produce a bunch of sentences in the new grammar and see what distribution their interpretation takes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot distribution of numbers obtained with this grammar</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">eval</span><span class="p">(</span><span class="n">complete</span><span class="p">(</span><span class="s1">&#39;&lt;S&gt;&#39;</span><span class="p">,</span> <span class="n">CFG_arithmetic</span><span class="p">),</span> <span class="n">meanings</span><span class="p">)</span> 
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/96f2b407717a13b3c4f0a881a93396c8be1f1b51508b70d24e03850cc8d69e4b.png" src="_images/96f2b407717a13b3c4f0a881a93396c8be1f1b51508b70d24e03850cc8d69e4b.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -366,7 +1091,7 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -374,44 +1099,125 @@ const thebe_selector_output = ".output, .cell_output"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="1_lecture.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lecture</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_lecture.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="2_topfile.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="2_topfile.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">The technical background</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Fausto Carcassi<br/>
-    
-        &copy; Copyright 2023.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-grammars">Formal Grammars</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-dictionaries">Using dictionaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-new-piece-of-python-syntax-generators">A new piece of python syntax: generators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-classes">Using classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-grammars-class">Defining a grammars class</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-minimal-formulas-more-difficult">Finding minimal formulas (more difficult!)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-context-free-grammar">Probabilistic context-free grammar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-semantics">Formal semantics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-arithmetic-as-a-cfg">Basic arithmetic as a CFG</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-grammar">A simple grammar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-the-grammar">Interpreting the grammar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-cfg-to-a-pcfg">From a CFG to a PCFG</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expanding-the-grammar">Expanding the grammar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fausto Carcassi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

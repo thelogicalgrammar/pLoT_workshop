@@ -1,537 +1,457 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Introduction &#8212; A day w/ the pLoT</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3_lab';</script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Applications" href="4_topfile.html" />
     <link rel="prev" title="Lecture" href="3_lecture.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">A day w/ the pLoT</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="howto.html">
-   Running code in labs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="acknowledgments.html">
-   Acknowledgments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="askquestion.html">
-   Ask a question!
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="readings.html">
-   Suggested readings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_refresher.html">
-   Python refresher
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="howto.html">Running code in labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="askquestion.html">Ask a question!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readings.html">Suggested readings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_refresher.html">Python refresher</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Content
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="1_topfile.html">
-   1 - The Big Idea
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1_lab.html">
-     Lab
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2_topfile.html">
-   2 - The technical background
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_lab.html">
-     Lab
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="3_topfile.html">
-   3 - LOTlib3
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Introduction
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="4_topfile.html">
-   4 - Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_lecture.html">
-     Lecture
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_lab.html">
-     Lab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4_lab_solved.html">
-     Lab (solved)
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_topfile.html">1 - The Big Idea</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_lecture.html">Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_topfile.html">2 - The technical background</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_lecture.html">Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="3_topfile.html">3 - LOTlib3</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3_lecture.html">Lecture</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_topfile.html">4 - Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_lecture.html">Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_lab.html">Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_lab_solved.html">Lab (solved)</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/3_lab.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/thelogicalgrammar/pLoT_workshop"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/thelogicalgrammar/pLoT_workshop/issues/new?title=Issue%20on%20page%20%2F3_lab.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/thelogicalgrammar/pLoT_workshop/blob/master/book/3_lab.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/thelogicalgrammar/pLoT_workshop/master?urlpath=tree/book/3_lab.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/thelogicalgrammar/pLoT_workshop/blob/master/book/3_lab.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/thelogicalgrammar/pLoT_workshop" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/thelogicalgrammar/pLoT_workshop/issues/new?title=Issue%20on%20page%20%2F3_lab.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/3_lab.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grammars">
-     Grammars
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hypotheses">
-     Hypotheses
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-hypotheses">
-     Making hypotheses
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-mcmc">
-     Running MCMC
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-our-hypothesis-class-more-robust">
-     Making our hypothesis class more robust
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-serious-about-running">
-     Getting serious about running
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#primitives">
-     Primitives
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nonterminals-in-the-grammar">
-     Nonterminals in the grammar
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-best-hypotheses">
-     The best hypotheses
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hypotheses-as-functions">
-     Hypotheses as functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lambdas">
-   Lambdas
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#here-s-where-things-get-crazy">
-     Here’s where things get crazy
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recursive-functions">
-     Recursive functions
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grammars">Grammars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses">Hypotheses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-hypotheses">Making hypotheses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-mcmc">Running MCMC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-our-hypothesis-class-more-robust">Making our hypothesis class more robust</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-serious-about-running">Getting serious about running</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitives">Primitives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonterminals-in-the-grammar">Nonterminals in the grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-best-hypotheses">The best hypotheses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses-as-functions">Hypotheses as functions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lambdas">Lambdas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here-s-where-things-get-crazy">Here’s where things get crazy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Introduction
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grammars">
-     Grammars
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hypotheses">
-     Hypotheses
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-hypotheses">
-     Making hypotheses
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-mcmc">
-     Running MCMC
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-our-hypothesis-class-more-robust">
-     Making our hypothesis class more robust
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-serious-about-running">
-     Getting serious about running
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#primitives">
-     Primitives
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nonterminals-in-the-grammar">
-     Nonterminals in the grammar
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-best-hypotheses">
-     The best hypotheses
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hypotheses-as-functions">
-     Hypotheses as functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lambdas">
-   Lambdas
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#here-s-where-things-get-crazy">
-     Here’s where things get crazy
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recursive-functions">
-     Recursive functions
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="c1"># in colab</span>
     <span class="kn">import</span> <span class="nn">google.colab</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;In colab, downloading LOTlib3&#39;</span><span class="p">)</span>
-    <span class="o">!</span>git clone https://github.com/thelogicalgrammar/LOTlib3
+    <span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/thelogicalgrammar/LOTlib3
 <span class="k">except</span><span class="p">:</span>
     <span class="c1"># not in colab</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in colab!&#39;</span><span class="p">)</span>
@@ -549,8 +469,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div></blockquote>
 <p>LOTlib3 is a library for inferring compositions of functions from observations of their inputs and outputs or simply their outputs if there is no input. This tutorial will introduce a very simple problem and how it can be solved in LOTlib3.</p>
 <p>Suppose that you know basic arithmetic operations (called “primitives”) like addition (+), subtraction (-), multiplication (*) and division (/). You observe a number which has been constructed using these operations, and wish to infer which operations were used. We’ll assume that you observe the single number <code class="docutils literal notranslate"><span class="pre">12</span></code> and then do Bayesian inference in order to discover which operations occurred. For instance, 12 may be written as <code class="docutils literal notranslate"><span class="pre">(1+1)</span> <span class="pre">*</span> <span class="pre">6</span></code>, involving an addition, a multiplication, two uses of 1, and one use of 6. Or it may have been written as <code class="docutils literal notranslate"> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">11</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">*</span> <span class="pre">2</span></code>, etc. There are lots of other ways.  Which one is correct?  Well any composition of addition, subtraction, multiplication, etc… that outputs a 12 would be consistent with the data.  However, some might seem more plausible than others.  For instance it might be unlikely the 12 was generated as 12+(1-1+1-1+1-1+1-1+1-1+1-1+1-1+1-1) as it seems a rather obtuse way to have arrived as 12.  LOTLib3 is designed to help you make sensible decisions about which compositions of functions likely explain a particular set of outputs or input-output pairs.</p>
-<div class="section" id="grammars">
-<h2>Grammars<a class="headerlink" href="#grammars" title="Permalink to this headline">¶</a></h2>
+<section id="grammars">
+<h2>Grammars<a class="headerlink" href="#grammars" title="Permalink to this headline">#</a></h2>
 <p>The general strategy of LOTlib3 models is to specify a space of possible compositions using a grammar. The grammar is actually a probabilistic context free grammar (with one small modification described below) that specifies a prior distribution on trees, or equivalently compositional structures like (1+1)<em>6, 2+2+2+2+2+2, (1+1)+(2</em>5), etc. If this is unfamiliar, the wiki on <a class="reference external" href="https://en.wikipedia.org/wiki/Stochastic_context-free_grammar">PCFGs</a> would be useful to read first.</p>
 <p>However, the best way to understand the grammar is as a way of specifying a program: any expansion of the grammar “renders” into a python program, whose code can then be evaluated. This will be made more concrete later.</p>
 <p>For now, here is how we can construct a simple example grammar</p>
@@ -624,9 +544,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>There is a column in this output that should say ‘None’ for each row of the output.  It is ok to ignore that for now.</p>
-</div>
-<div class="section" id="hypotheses">
-<h2>Hypotheses<a class="headerlink" href="#hypotheses" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="hypotheses">
+<h2>Hypotheses<a class="headerlink" href="#hypotheses" title="Permalink to this headline">#</a></h2>
 <p>The grammar nicely specifies a space of expressions, but LOTlib3 needs a “hypothesis” to perform inference. In LOTlib3, hypotheses must define functions for computing priors, computing the likelihood of data, and implementing proposals in order for MCMC to work. In most cases, a hypothesis will represent a single production from the grammar.</p>
 <p>Fortunately, for our purposes, there is a simple hypothesis class that it built-in to LOTlib3 which defaultly implements these. Let’s just use it here.</p>
 <div class="cell docutils container">
@@ -650,9 +570,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>There are a few things going on here. First, we import LOTHypothesis and use that to define the new class <code class="docutils literal notranslate"><span class="pre">MyHypothesis</span></code>. LOTHypothesis defines <code class="docutils literal notranslate"><span class="pre">compute_prior()</span></code> and <code class="docutils literal notranslate"><span class="pre">compute_likelihood(data)</span></code>–more about these later. We define the initializer <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. We overwrite the LOTHypothesis default and specify that the grammar we want is the one defined above. LOTHypotheses also defaultly take an argument called <code class="docutils literal notranslate"><span class="pre">x</span></code> (more on this later), but for now we want our hypothesis to be a function of no arguments. When we convert the value of the hypothesis into a string, it will get substituted into the <code class="docutils literal notranslate"><span class="pre">display</span></code> keyword. Here, <code class="docutils literal notranslate"><span class="pre">display=&quot;lambda:</span> <span class="pre">%s&quot;</span></code> meaning that the hypothesis will be displayed and also evaled in python as appearing after a lambda.</p>
 <p>Essentially, <code class="docutils literal notranslate"><span class="pre">compute_likelihood</span></code> maps <code class="docutils literal notranslate"><span class="pre">compute_single_likelihood</span></code> over a list of data (treating each as IID conditioned on the hypothesis). So when we want to define how the likelihood works, we typically want to overwrite <code class="docutils literal notranslate"><span class="pre">compute_single_likelihood</span></code> as we have above. In this function, we expect an input <code class="docutils literal notranslate"><span class="pre">datum</span></code> with attributes <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">output</span></code>, and <code class="docutils literal notranslate"><span class="pre">alpha</span></code>. The LOTHypothesis <code class="docutils literal notranslate"><span class="pre">self</span></code> can be viewed as a function (here, one with no arguments) and so it can be called on <code class="docutils literal notranslate"><span class="pre">datum.input</span></code>. The likelihood this defines is one in which we generate a random number from 1..100 with probability <code class="docutils literal notranslate"><span class="pre">1-datum.alpha</span></code> and the correct number with probability <code class="docutils literal notranslate"><span class="pre">datum.alpha</span></code>. Thus, when the hypothesis returns the correct value (e.g. <code class="docutils literal notranslate"><span class="pre">self(*datum.input)</span> <span class="pre">==</span> <span class="pre">datum.output</span></code>) we must add these quantities to get the total probability of producing the data. When it does not, we must return only the former. LOTlib3.Hypotheses.Likelihoods defines a number of other standard likelihoods, including the most commonly used  one, <code class="docutils literal notranslate"><span class="pre">BinaryLikelihood</span></code>.</p>
-</div>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
 <p>Given that our hypothesis wants those kinds of data, we can then create data as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -663,9 +583,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Note here that the most natural form of data is a list–even if it is only a single element–where each element, a datum, gets passed to <code class="docutils literal notranslate"><span class="pre">compute_single_likelihood</span></code>. The data here specifies the input, output, and noise value <code class="docutils literal notranslate"><span class="pre">alpha</span></code>. Note that even though <code class="docutils literal notranslate"><span class="pre">alpha</span></code> could live as an attribute of hypotheses, it makes most sense to view it as a known part of the data. Here input is a empty list because there is no input!  Remember the example we started with was explaining a single output (the number 12).  Keep reading to understand examples with an input below!</p>
-</div>
-<div class="section" id="making-hypotheses">
-<h2>Making hypotheses<a class="headerlink" href="#making-hypotheses" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="making-hypotheses">
+<h2>Making hypotheses<a class="headerlink" href="#making-hypotheses" title="Permalink to this headline">#</a></h2>
 <p>We may now use our definition of a hypothesis to make one. If we call the initializer without a <code class="docutils literal notranslate"><span class="pre">value</span></code> keyword, LOTHypothesis just samples it from the given grammar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -693,9 +613,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="running-mcmc">
-<h2>Running MCMC<a class="headerlink" href="#running-mcmc" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="running-mcmc">
+<h2>Running MCMC<a class="headerlink" href="#running-mcmc" title="Permalink to this headline">#</a></h2>
 <p>We are almost there. We have define a grammar and a hypothesis which uses the grammar to define a prior, and custom code to define a likelihood. LOTlib3’s main claim to fame is that we can simply import MCMC routines and do inference over the space defined by the grammar. It’s very easy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -731,9 +651,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>LOTlib3 hypotheses are required to hash nicely, meaning that they can be saved or put into dictionaries and sets like this.</p>
-</div>
-<div class="section" id="making-our-hypothesis-class-more-robust">
-<h2>Making our hypothesis class more robust<a class="headerlink" href="#making-our-hypothesis-class-more-robust" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="making-our-hypothesis-class-more-robust">
+<h2>Making our hypothesis class more robust<a class="headerlink" href="#making-our-hypothesis-class-more-robust" title="Permalink to this headline">#</a></h2>
 <p>As you might have noticed we did not allow the number 0 as a terminal value in our grammar.  This is because it ran the risk of a divide by zero error.  However, we might like to include all the numbers between zero and nine.  So let’s change that one part of our grammar definiton by replacing the lines like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -772,9 +692,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="getting-serious-about-running">
-<h2>Getting serious about running<a class="headerlink" href="#getting-serious-about-running" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="getting-serious-about-running">
+<h2>Getting serious about running<a class="headerlink" href="#getting-serious-about-running" title="Permalink to this headline">#</a></h2>
 <p>Now with more robust code, we can run the <code class="docutils literal notranslate"><span class="pre">Counter</span></code> code above for longer and get a better picture of the posterior.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -828,9 +748,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="primitives">
-<h2>Primitives<a class="headerlink" href="#primitives" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="primitives">
+<h2>Primitives<a class="headerlink" href="#primitives" title="Permalink to this headline">#</a></h2>
 <p>LOTlib3 also builds in a number of primitive operations, which live in LOTlib3.Primitives. When these are supplied as the <FUNCTION> in grammar rule, they act as functions that get called. <strong>By convention, LOTlib3 internal primitives end in an underscore</strong>. Here is an example equivalent to the grammar above, but using LOTlib3 function calls.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -872,9 +792,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>It is generally more friendly to give it an underscore to make sure it’s not confused for a normal python function.</p>
-</div>
-<div class="section" id="nonterminals-in-the-grammar">
-<h2>Nonterminals in the grammar<a class="headerlink" href="#nonterminals-in-the-grammar" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="nonterminals-in-the-grammar">
+<h2>Nonterminals in the grammar<a class="headerlink" href="#nonterminals-in-the-grammar" title="Permalink to this headline">#</a></h2>
 <p>It may not have been obvious in the above examples, but the <NONTERMINAL> part of each grammar rule can be viewed as specifying the <em>return type</em> of the function that rule correspond to, while the <ARGUMENTS> can be viewed as the types of the arguments. Thus, what a grammar mainly does is ensure that the primitives all get arguments of the correct types.</p>
 <p>Let’s see another example: suppose we had two kinds of things: booleans (BOOL) and numbers (EXPR). We might write a grammar like this</p>
 <div class="cell docutils container">
@@ -896,9 +816,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Here, the second argument to the <code class="docutils literal notranslate"><span class="pre">if</span></code> line must be a BOOL, and so we have given LOTlib3 a way to create code that returns BOOLs. It just happens that this code is a comparison of numbers, or EXPRs.</p>
-</div>
-<div class="section" id="the-best-hypotheses">
-<h2>The best hypotheses<a class="headerlink" href="#the-best-hypotheses" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-best-hypotheses">
+<h2>The best hypotheses<a class="headerlink" href="#the-best-hypotheses" title="Permalink to this headline">#</a></h2>
 <p>Very often, models in LOTlib3 approximate the full posterior distribution P(H|D) using the highest posterior hypotheses. There are two main ways to do this. One is a class named <code class="docutils literal notranslate"><span class="pre">LOTlib3.TopN</span></code> which acts like a set–you can add to it, but it keeps only the ones with highest posterior_score (or whatever “key” is set). It will return them to you in a sorted order:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -927,9 +847,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>You might notice running this that productions the results in the output 12 are given high posterior scores.  However, it still might be the case that very simple and short programs like just a single number output (like 0) are still the “top” hypothesis.  This shows the importance of thinking about the nature of your prior and the likelihood function for your problem.</p>
-</div>
-<div class="section" id="hypotheses-as-functions">
-<h2>Hypotheses as functions<a class="headerlink" href="#hypotheses-as-functions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="hypotheses-as-functions">
+<h2>Hypotheses as functions<a class="headerlink" href="#hypotheses-as-functions" title="Permalink to this headline">#</a></h2>
 <p>Remember how we made <code class="docutils literal notranslate"><span class="pre">display=&quot;lambda:</span> <span class="pre">%s&quot;</span></code> in the definition of MyHypothesis? That stated that a hypothesis was not a function of any arguments since the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> has no arguments. You may have noticed that when a hypothesis is converting to a string (for printing or evaling) it acquires this additional <code class="docutils literal notranslate"><span class="pre">lambda</span></code> on the outside, indicating that the hypothesis was a function of no arguments, or a <a class="reference external" href="https://en.wikipedia.org/wiki/Thunk">thunk</a>.</p>
 <p>Here is a new listing where a class like MyHypothesis requires an argument. Now, when it renders, it comes with a <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">x</span></code> in front, rather than just a <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. There are two other primary changes: the grammar now has to allow the argument (<code class="docutils literal notranslate"><span class="pre">x</span></code>) to be produced in expressions, and the <code class="docutils literal notranslate"><span class="pre">datum.input</span></code> has to provide an argument, which gets bound to <code class="docutils literal notranslate"><span class="pre">x</span></code> when the function is evaluated.</p>
 <div class="cell docutils container">
@@ -1067,10 +987,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>As you can see from the complexity of this array which shows the probabilities for different outputs given different inputs, observing that some (unseen) function maps 3-&gt;12 gives rise to nontrivial beliefs about the function underlying this transformation.</p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="lambdas">
-<h1>Lambdas<a class="headerlink" href="#lambdas" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="lambdas">
+<h1>Lambdas<a class="headerlink" href="#lambdas" title="Permalink to this headline">#</a></h1>
 <p>The power of this kind of representation comes not only from an ability to learn such simple functions, but to also learn functions with new kinds of abstractions. In programming languages, the simplest kind of abstraction is a variable–a value that is stored for later use. The variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is created above on the level of a LOTHypothesis, but where things get more interesting is when the lower down values in a grammar can be used to define variables. Let’s look at a grammar with two additional pieces</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1142,8 +1062,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>will make bound variables named <code class="docutils literal notranslate"><span class="pre">v1</span></code>, <code class="docutils literal notranslate"><span class="pre">v2</span></code>, etc.</p>
-<div class="section" id="here-s-where-things-get-crazy">
-<h2>Here’s where things get crazy<a class="headerlink" href="#here-s-where-things-get-crazy" title="Permalink to this headline">¶</a></h2>
+<section id="here-s-where-things-get-crazy">
+<h2>Here’s where things get crazy<a class="headerlink" href="#here-s-where-things-get-crazy" title="Permalink to this headline">#</a></h2>
 <p>Of course, the true art of lambdas is not just that they can define variables, but that the variables themselves can be functions! This corresponds to <em>function declarations</em> in ordinary programming languages. If this is foreign or weird, I’d suggest reading <a class="reference external" href="https://mitpress.mit.edu/sicp/">The Structure and Interpretation of Computer Programs</a>.</p>
 <p>To define lambdas as functions, we only need to specify a <code class="docutils literal notranslate"><span class="pre">bv_args</span></code> list in the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> declaration. <code class="docutils literal notranslate"><span class="pre">bv_args</span></code> is the type of arguments that are passed to each use of a bound variable each time it is used. But… then we have a problem of needing to bind that variable to something. If <code class="docutils literal notranslate"><span class="pre">yi</span></code> is itself a function of an EXPR, then its argument <em>also</em> has to be a function. That requires two lambdas. Here’s how it works:</p>
 <div class="cell docutils container">
@@ -1201,9 +1121,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Here, we have define a variable <code class="docutils literal notranslate"><span class="pre">F1</span></code> that really represents the <em>function</em> <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">y1:</span> <span class="pre">y1+3</span></code>. The value that is returned is the value of applying <code class="docutils literal notranslate"><span class="pre">F1</span></code> to the overall hypothesis value <code class="docutils literal notranslate"><span class="pre">x</span></code> plus <code class="docutils literal notranslate"><span class="pre">1</span></code>. Note that LOTlib3 here has correctly used <code class="docutils literal notranslate"><span class="pre">F1</span></code> in a context where an EXPR is needed (due to <code class="docutils literal notranslate"><span class="pre">bv_type='EXPR'</span></code> on <code class="docutils literal notranslate"><span class="pre">FUNCDEF</span></code>). It knows that the argument to <code class="docutils literal notranslate"><span class="pre">F1</span></code> is also an EXPR, which here happens to be expanded to <code class="docutils literal notranslate"><span class="pre">x+1</span></code>. It also knows that <code class="docutils literal notranslate"><span class="pre">F1</span></code> is itself a function, and it binds this function (through the outermost apply) to <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">y1:</span> <span class="pre">y1+3</span></code>. LOTlib3 knows that <code class="docutils literal notranslate"><span class="pre">F1</span></code> can only be used in the left hand side of this apply, and <code class="docutils literal notranslate"><span class="pre">y1</span></code> can only be used on the right. This holds even if multiple bound variables of different types are generated.</p>
 <p>This ability to define functions provides some of the most interesting learning dynamics for the model. A nice example is provided in LOTlib3.Examples.Magnetism, where learners take data and learn predicates classifying observable objects into two kinds, as well as laws stated over those kinds.</p>
-</div>
-<div class="section" id="recursive-functions">
-<h2>Recursive functions<a class="headerlink" href="#recursive-functions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="recursive-functions">
+<h2>Recursive functions<a class="headerlink" href="#recursive-functions" title="Permalink to this headline">#</a></h2>
 <p>Well that’s wonderful, but what if we want a function to refer to <em>itself</em>? This is common in programming languages in the form of <a class="reference external" href="https://en.wikipedia.org/wiki/Recursion_%28computer_science%29">recursive</a> definitions. This takes a little finagling in the LOTlib3 internals (through ambitious use of the <a class="reference external" href="https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed_point_combinators_in_lambda_calculus">Y-combinator</a>) which you don’t have to worry about. There is a class that implements recursion straightforwardly: <code class="docutils literal notranslate"><span class="pre">RecursiveLOTHypothesis</span></code>. Internally, hypothesis of this type always have an argument (defaultly called <code class="docutils literal notranslate"><span class="pre">recurse_</span></code>) which binds to themselves!</p>
 <p>Here is a simple example:</p>
 <div class="cell docutils container">
@@ -1274,8 +1194,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Note that there is nothing special about the <code class="docutils literal notranslate"><span class="pre">recurse_</span></code> name: it can be changed by setting <code class="docutils literal notranslate"><span class="pre">recurse=...</span></code> in <code class="docutils literal notranslate"><span class="pre">RecursiveLOTHypothesis.__init__</span></code>, but then the name should also be changed in the grammar. In this tutorial, we have only looked at defining the grammar, not in inferring recursive hypotheses. LOTlib3.Examples.Number is an example of learning a genuinely recursive function from data.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1289,7 +1209,7 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1297,44 +1217,124 @@ const thebe_selector_output = ".output, .cell_output"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="3_lecture.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lecture</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3_lecture.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="4_topfile.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="4_topfile.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Applications</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Fausto Carcassi<br/>
-    
-        &copy; Copyright 2023.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grammars">Grammars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses">Hypotheses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-hypotheses">Making hypotheses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-mcmc">Running MCMC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-our-hypothesis-class-more-robust">Making our hypothesis class more robust</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-serious-about-running">Getting serious about running</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitives">Primitives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonterminals-in-the-grammar">Nonterminals in the grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-best-hypotheses">The best hypotheses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypotheses-as-functions">Hypotheses as functions</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lambdas">Lambdas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here-s-where-things-get-crazy">Here’s where things get crazy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursive-functions">Recursive functions</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fausto Carcassi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
