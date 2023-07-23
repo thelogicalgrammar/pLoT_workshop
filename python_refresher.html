@@ -1851,18 +1851,22 @@ True
 <li><p>Write a <span class="math notranslate nohighlight">\(\lambda\)</span> function to sum three numbers.</p></li>
 <li><p>Write a recursive function that calculates the factorial function for <span class="math notranslate nohighlight">\(n\)</span>, written <span class="math notranslate nohighlight">\(n!\)</span>, and defined as follows:</p></li>
 </ul>
-<p>\begin{align}
-1! &amp;= 1 \
-n! &amp;= n \times (n-1)!
-\end{align}</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f84b88b6-a276-4423-975f-851b4b0641d0">
+<span class="eqno">(1)<a class="headerlink" href="#equation-f84b88b6-a276-4423-975f-851b4b0641d0" title="Permalink to this equation">#</a></span>\[\begin{align}
+    1! &amp;= 1 \\
+    n! &amp;= n \times (n-1)!
+\end{align}\]</div>
 <ul class="simple">
 <li><p>Write a recursive function <code class="docutils literal notranslate"><span class="pre">interpret</span></code> that takes a string that consists of a series of <code class="docutils literal notranslate"><span class="pre">¬</span></code> followed by a single <code class="docutils literal notranslate"><span class="pre">a</span></code> (<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬¬a</span></code>, etc) and is defined as follows:</p></li>
 </ul>
-<p>\begin{align}
-\text{interpret}(x) &amp;= 1                             &amp; \text{if } x = \text{‘a’} \
-&amp;= 1 - \text{interpret(x[1:])}   &amp; \text{else}
-\end{align}
-(do you see how this corresponds to the semantics of Boolean negation?)</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0a5ef477-d428-419b-836f-5f433032c476">
+<span class="eqno">(2)<a class="headerlink" href="#equation-0a5ef477-d428-419b-836f-5f433032c476" title="Permalink to this equation">#</a></span>\[\begin{align}
+    \text{interpret}(x) &amp;= 1                             &amp; \text{if } x = \text{'a'} \\
+                        &amp;= 1 - \text{interpret(x[1:])}   &amp; \text{else}
+\end{align}\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(do you see how this corresponds to the semantics of Boolean negation?)
+</pre></div>
+</div>
 <ul>
 <li><p>Rewrite the factorial function and <code class="docutils literal notranslate"><span class="pre">interpret</span></code> using <code class="docutils literal notranslate"><span class="pre">recursive_function</span></code> and <code class="docutils literal notranslate"><span class="pre">apply_inside</span></code> rather than explicit recursion.</p></li>
 <li><p>Make a scatterplot of the first 10 strings interpreted by <code class="docutils literal notranslate"><span class="pre">interpret</span></code>  (<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬¬a</span></code>, etc): the x-axis shows the strings in order and the y-axis shows the result of <code class="docutils literal notranslate"><span class="pre">interpret</span></code> for the corresponding string.</p></li>
