@@ -180,14 +180,17 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3_topfile.html">3 - LOTlib3</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3_lecture.html">Lecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3_lab.html">Introduction</a></li>
-
+<li class="toctree-l2"><a class="reference internal" href="3_lab.html">Lab</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4_topfile.html">4 - Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4_lecture.html">Lecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_lab.html">Lab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4_lab_solved.html">Lab (solved)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_topfile.html">5 - Conclusions</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_lecture.html">Lecture</a></li>
 </ul>
 </li>
 </ul>
@@ -1851,16 +1854,16 @@ True
 <li><p>Write a <span class="math notranslate nohighlight">\(\lambda\)</span> function to sum three numbers.</p></li>
 <li><p>Write a recursive function that calculates the factorial function for <span class="math notranslate nohighlight">\(n\)</span>, written <span class="math notranslate nohighlight">\(n!\)</span>, and defined as follows:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-f84b88b6-a276-4423-975f-851b4b0641d0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f84b88b6-a276-4423-975f-851b4b0641d0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-55a98588-57ba-4efb-a13c-ff61a736c422">
+<span class="eqno">(1)<a class="headerlink" href="#equation-55a98588-57ba-4efb-a13c-ff61a736c422" title="Permalink to this equation">#</a></span>\[\begin{align}
     1! &amp;= 1 \\
     n! &amp;= n \times (n-1)!
 \end{align}\]</div>
 <ul class="simple">
 <li><p>Write a recursive function <code class="docutils literal notranslate"><span class="pre">interpret</span></code> that takes a string that consists of a series of <code class="docutils literal notranslate"><span class="pre">¬</span></code> followed by a single <code class="docutils literal notranslate"><span class="pre">a</span></code> (<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬¬a</span></code>, etc) and is defined as follows:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-0a5ef477-d428-419b-836f-5f433032c476">
-<span class="eqno">(2)<a class="headerlink" href="#equation-0a5ef477-d428-419b-836f-5f433032c476" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0bbdc475-5a32-4ddf-b1d6-35977528fc41">
+<span class="eqno">(2)<a class="headerlink" href="#equation-0bbdc475-5a32-4ddf-b1d6-35977528fc41" title="Permalink to this equation">#</a></span>\[\begin{align}
     \text{interpret}(x) &amp;= 1                             &amp; \text{if } x = \text{'a'} \\
                         &amp;= 1 - \text{interpret(x[1:])}   &amp; \text{else}
 \end{align}\]</div>

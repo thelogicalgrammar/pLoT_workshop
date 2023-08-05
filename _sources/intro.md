@@ -1,7 +1,11 @@
 # Introduction
 
-This is the material for Fausto Carcassi's one-day workshop on the probabilistic Language of Thought (pLoT).
-This workshop consists of four short modules: two in the morning, two in the afternoon. The first section focuses on the foundations required to understand the modern approach to the pLoT. The second section contains little introductions to Python, to formal grammars, and to approximate Bayesian inference. The third section provides an introduction to the LOTlib3 library. The fourth section focuses on concept learning in a pLoT through a series of case studies. Times are planned as follows:
+This is the material for Fausto Carcassi's workshop on the probabilistic Language of Thought (pLoT).
+This workshop consists of five modules. The first module focuses on the foundations required to understand the modern approach to the pLoT. The second contains little introductions to Python, to formal grammars, and to approximate Bayesian inference. The third provides an introduction to the LOTlib3 library. The fourth focuses on concept learning in a pLoT through a series of case studies. The fifth and last is a summary and overview of current directions.
+
+## Plan
+
+When this workshop happens within a day, times are planned as follows:
 
 | Section                                  | Start - end   | 
 | ---------------------------------------- |:-------------:|
@@ -12,7 +16,7 @@ This workshop consists of four short modules: two in the morning, two in the aft
 | Case studies                             | 15:20 - 16:30 |
 | Summary                                  | 16:30 - 17:00 |
 
-Some of the workshop uses [Steven Piantadosi](http://colala.berkeley.edu/people/piantadosi/)'s library [LOTlib3](https://github.com/piantado/LOTlib3). Note that LOTlib3 is slower than other similar inference libraries developed by Piantadosi (e.g. [fleet](https://github.com/piantado/Fleet)). However, we use LOTlib3 for a crucial reasons: it is written entirely in python, which means folks with more python knowledge can easily have a look at what is happening under the hood, and parts of the LOTlib3 code can be explained in class. 
+Some of the workshop uses [Steven Piantadosi](http://colala.berkeley.edu/people/piantadosi/)'s library [LOTlib3](https://github.com/piantado/LOTlib3), but [modified by yours truly](https://github.com/thelogicalgrammar/LOTlib3). LOTlib3 is slower than other similar inference libraries developed by Piantadosi (e.g. [fleet](https://github.com/piantado/Fleet)), but we use LOTlib3 for a crucial reasons: it is written entirely in python, which means folks with more python knowledge can easily have a look at what is happening under the hood, and parts of the LOTlib3 code can be explained if needed. 
 
 ## Table of contents
 
