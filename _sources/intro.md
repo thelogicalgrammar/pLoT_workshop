@@ -5,6 +5,8 @@ This workshop consists of five modules. The first module focuses on the foundati
 
 ## Plan
 
+When this workshop is taught over a week, there is one session per day. 
+
 When this workshop happens within a day, times are planned as follows:
 
 | Section                                  | Start - end   | 

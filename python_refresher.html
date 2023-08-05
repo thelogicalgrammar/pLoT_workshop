@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Python refresher &#8212; A day w/ the pLoT</title>
+    <title>Python refresher &#8212; A pLoT workshop</title>
   
   
   
@@ -102,8 +102,8 @@ const thebe_selector_output = ".output, .cell_output"
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -143,21 +143,13 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo_light.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo_dark.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="howto.html">Running code in labs</a></li>
@@ -234,84 +226,6 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://colab.research.google.com/github/thelogicalgrammar/pLoT_workshop/blob/master/book/python_refresher.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onColab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/thelogicalgrammar/pLoT_workshop" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/thelogicalgrammar/pLoT_workshop/issues/new?title=Issue%20on%20page%20%2Fpython_refresher.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -1854,16 +1768,16 @@ True
 <li><p>Write a <span class="math notranslate nohighlight">\(\lambda\)</span> function to sum three numbers.</p></li>
 <li><p>Write a recursive function that calculates the factorial function for <span class="math notranslate nohighlight">\(n\)</span>, written <span class="math notranslate nohighlight">\(n!\)</span>, and defined as follows:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-55a98588-57ba-4efb-a13c-ff61a736c422">
-<span class="eqno">(1)<a class="headerlink" href="#equation-55a98588-57ba-4efb-a13c-ff61a736c422" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ba6e22c8-4ba1-40f1-bd79-666af525eac9">
+<span class="eqno">(1)<a class="headerlink" href="#equation-ba6e22c8-4ba1-40f1-bd79-666af525eac9" title="Permalink to this equation">#</a></span>\[\begin{align}
     1! &amp;= 1 \\
     n! &amp;= n \times (n-1)!
 \end{align}\]</div>
 <ul class="simple">
 <li><p>Write a recursive function <code class="docutils literal notranslate"><span class="pre">interpret</span></code> that takes a string that consists of a series of <code class="docutils literal notranslate"><span class="pre">¬</span></code> followed by a single <code class="docutils literal notranslate"><span class="pre">a</span></code> (<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬a</span></code>, <code class="docutils literal notranslate"><span class="pre">¬¬¬a</span></code>, etc) and is defined as follows:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-0bbdc475-5a32-4ddf-b1d6-35977528fc41">
-<span class="eqno">(2)<a class="headerlink" href="#equation-0bbdc475-5a32-4ddf-b1d6-35977528fc41" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b6b987b8-3681-4b08-9720-da833fade972">
+<span class="eqno">(2)<a class="headerlink" href="#equation-b6b987b8-3681-4b08-9720-da833fade972" title="Permalink to this equation">#</a></span>\[\begin{align}
     \text{interpret}(x) &amp;= 1                             &amp; \text{if } x = \text{'a'} \\
                         &amp;= 1 - \text{interpret(x[1:])}   &amp; \text{else}
 \end{align}\]</div>
