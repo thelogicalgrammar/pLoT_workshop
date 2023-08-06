@@ -2,7 +2,7 @@
 
 If you are curious to get a general idea for what we're doing, you can watch [this youtube video](https://www.youtube.com/watch?v=239aVfgJ-0E). 
 
-There are no essential readings to prepare; The workshop is meant to be a self-contained one-day-experience. However, the material will be difficult, so reading some content beforehand can help understand the material more clearly during the workshop. Here are some introductory readings you can try to do to be _better_ prepared. The following readings do not need to be done in order. Rather, they are self-contained, so feel free to pick and choose what you find most interesting.
+There are no essential readings to prepare; The workshop is meant to be a self-contained experience. However, the material will be difficult, so reading some content beforehand can help understand the material more clearly during the workshop. Here are some introductory readings you can try to do to be _better_ prepared. The following readings do not need to be done in order. Rather, they are self-contained, so feel free to pick and choose what you find most interesting.
 
 ## Philosophical background
 

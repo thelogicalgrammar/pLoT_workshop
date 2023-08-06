@@ -1,10 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: "A day w/ the pLoT"
+title: "A pLoT workshop"
 author: Fausto Carcassi
 copyright: "2023"
-logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -26,6 +25,11 @@ sphinx:
   config:
     bibtex_reference_style: author_year
     html_extra_path: ['lectures']
+  config:
+    html_theme_options: 
+      logo:
+        image_light: logo_light.png
+        image_dark: logo_dark.png
 
 # Information about where the book exists on the web
 repository:
