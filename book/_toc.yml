@@ -46,3 +46,8 @@ parts:
           title: Lab
         - file: 4_lab_solved
           title: Lab (solved)
+    - file: 5_topfile
+      title: 5 - Conclusions
+      sections:
+        - file: 5_lecture
+          title: Lecture
