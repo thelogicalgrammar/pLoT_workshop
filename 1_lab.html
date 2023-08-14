@@ -423,7 +423,7 @@ S \rightarrow aS | bS | \epsilon
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>String:  ab
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>String:  bbbb
 </pre></div>
 </div>
 </div>
@@ -693,6 +693,7 @@ abba
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">choice</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">IPython</span>
 </pre></div>
@@ -774,7 +775,7 @@ abba
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;plusOne(plusOne(one))&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;plusOne(plusOne(plusOne(one)))&#39;
 </pre></div>
 </div>
 </div>
@@ -857,6 +858,9 @@ abba
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5c27b852ae1d97d5a2549bfedf3b8a16aa2057621cb164fe75457775b92a20d3.png" src="_images/5c27b852ae1d97d5a2549bfedf3b8a16aa2057621cb164fe75457775b92a20d3.png" />
 </div>
 </div>
 <p>Turns out the probability of each number <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(2^{-n}\)</span>. Can you tell why?</p>
@@ -962,10 +966,18 @@ abba
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span>
+    <span class="n">numbers</span><span class="p">,</span>
+    <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;percent&#39;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7f5823b1cfd0&gt;
+</pre></div>
+</div>
+<img alt="_images/dd3214027221c521b8bd578978d3fbb504e5fa77c16a9412e01dd021c736a5c3.png" src="_images/dd3214027221c521b8bd578978d3fbb504e5fa77c16a9412e01dd021c736a5c3.png" />
 </div>
 </div>
 </section>
