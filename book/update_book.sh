@@ -7,6 +7,8 @@
 
 
 jupyter-book build --all ./
+cp lectures/*.pdf _build/html/
+cp lectures/*.pptx _build/html/
 # jupyter-book build ./
 ghp-import -n -p -f _build/html 
 
